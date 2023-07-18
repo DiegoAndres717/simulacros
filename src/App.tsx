@@ -2,12 +2,11 @@ import { ChangeEvent, useState } from "react";
 import QuestionBank from "./components/QuestionBank";
 import Questions from "./components/Questions";
 import Simulations from "./components/Simulations";
-import { questions } from "../data";
 import Results from "./components/Results ";
 import { CurrentViewType, Question } from "../types";
 
 const App = () => {
-  const [questionList] = useState<Array<Question>>(questions);
+  const [questionList, setQuestionList] = useState<Array<Question>>([]);
   const [userAnswers, setUserAnswers] = useState<number[]>([]);
   const [questionTimes, setQuestionTimes] = useState<number[]>([]);
   const [currentView, setCurrentView] =
@@ -41,6 +40,25 @@ const App = () => {
     setQuestionTimes(newQuestionTimes);
   };
 
+  const loadQuestions = () => {
+    console.log(selectedBasicArea, selectedSpecialties,timeQuestions);
+    fetch('./data/questions.json', {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({
+          basic_areas: selectedBasicArea,
+          specialties: selectedSpecialties,
+          time: timeQuestions
+      })
+    }).then(response => response.json()).then(data => {
+      setQuestionList(data);
+      setCurrentView('questions');
+    });
+};
+
   return (
     <>
       {currentView === "questionBank" && (
@@ -55,7 +73,7 @@ const App = () => {
           setSelectedSpecialties={setSelectedSpecialties}
           setSelectedBasicArea={setSelectedBasicArea}
           handleTimeQuestionsChange={handleTimeQuestionsChange}
-          onButtonClick={() => setCurrentView("questions")}
+          onButtonClick={() => loadQuestions()}
         />
       )}
       {currentView === "results" ? (
