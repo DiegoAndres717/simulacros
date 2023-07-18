@@ -1,56 +1,35 @@
+import { ChangeEvent } from "react";
+import { basicArea } from "../../constants";
 
-export default function BasicArea() {
+interface BasicAreaProps {
+  handleBasicAreaChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  handleSelectAllBasicArea: (event: ChangeEvent<HTMLInputElement>) => void;
+  selectedBasicArea: string[]
+}
+
+export default function BasicArea({ handleBasicAreaChange, handleSelectAllBasicArea, selectedBasicArea }: BasicAreaProps) {
   return (
-    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
-        <label className="flex items-center">
-          <input type="checkbox" className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer" />
-          Área básica 1
+    <div className="flex flex-col sm:grid sm:grid-cols-2 md:grid md:place-items-start md:grid-cols-4 lg:grid-cols-6 gap-2 mb-4">
+      {basicArea.map((basic) => (
+        <label key={basic.name} className="flex items-center text-slate-700">
+          <input
+            onChange={handleBasicAreaChange}
+            name={basic.name}
+            checked={selectedBasicArea.includes(basic.name)}
+            type="checkbox"
+            className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer"
+          />
+          {basic.label}
         </label>
-        <label className="flex items-center">
-          <input type="checkbox" className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer" />
-          Área básica 2
-        </label>
-        <label className="flex items-center">
-          <input type="checkbox" className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer" />
-          Área básica 3
-        </label>
-        <label className="flex items-center">
-          <input type="checkbox" className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer" />
-          Área básica 4
-        </label>
-        <label className="flex items-center">
-          <input type="checkbox" className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer" />
-          Área básica 5
-        </label>
-        <label className="flex items-center">
-          <input type="checkbox" className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer" />
-          Área básica 6
-        </label>
-        <label className="flex items-center">
-          <input type="checkbox" className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer" />
-          Área básica 7
-        </label>
-        <label className="flex items-center">
-          <input type="checkbox" className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer" />
-          Área básica 8
-        </label>
-        <label className="flex items-center">
-          <input type="checkbox" className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer" />
-          Área básica 9
-        </label>
-        <label className="flex items-center">
-          <input type="checkbox" className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer" />
-          Área básica 10
-        </label>
-        <label className="flex items-center">
-          <input type="checkbox" className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer" />
-          Área básica 11
-        </label>
-       
-        <label className="flex items-center">
-          <input type="checkbox" className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer" />
-          Todas las áreas básicas
-        </label>
+      ))}
+      <label className="flex items-center text-slate-700">
+        <input
+          onChange={handleSelectAllBasicArea} 
+          type="checkbox"
+          className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer"
+        />
+        Todas las áreas básicas
+      </label>
     </div>
-  )
+  );
 }

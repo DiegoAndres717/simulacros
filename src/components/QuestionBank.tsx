@@ -1,3 +1,4 @@
+import CustomButton from "./CustomButton"
 
 interface QuestionBankProps {
   onButtonClick: () => void
@@ -12,17 +13,20 @@ export default function QuestionBank({ onButtonClick }:QuestionBankProps) {
         <div className="flex flex-col justify-center items-center p-4 border rounded w-2/3">
           <p className="mb-2 text-xl text-gray-700 font-semibold">Crea tu simulacro</p>
           <p className="mb-2 text-gray-500 font-medium">Inf de que es esto</p>
-          <button 
-            onClick={onButtonClick}
-            className="flex items-center px-5 py-2 text-sm font-bold text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100">
-            Iniciar
-          </button>
+          <CustomButton 
+            title="Iniciar"
+            containerStyles="flex items-center px-5 py-2 text-sm font-bold text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100"
+            btnType="button"
+            handleClick={onButtonClick}
+          />
         </div>
         <div className="flex flex-col justify-center items-center p-4 border rounded w-2/3">
           <p className="mb-2 text-xl text-gray-700 font-semibold">Simulacro universidades</p>
-          <button className="flex items-center px-5 py-2 text-sm font-bold text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100">
-            Iniciar
-          </button>
+          <CustomButton 
+            title="Iniciar"
+            containerStyles="flex items-center px-5 py-2 text-sm font-bold text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100"
+            btnType="button"
+          />
         </div> 
       </div>
     </div>

@@ -1,18 +1,31 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from "react";
 import QuestionBank from "./components/QuestionBank";
 import Questions from "./components/Questions";
 import Simulations from "./components/Simulations";
 import { questions } from "../data";
-import type { CurrentViewType, Question } from "./types";
 import Results from "./components/Results ";
+import { CurrentViewType, Question } from "../types";
 
-const App = (): JSX.Element => {
+const App = () => {
   const [questionList] = useState<Array<Question>>(questions);
   const [userAnswers, setUserAnswers] = useState<number[]>([]);
   const [questionTimes, setQuestionTimes] = useState<number[]>([]);
-  const [currentView, setCurrentView] = useState<CurrentViewType>('QuestionBank');
+  const [currentView, setCurrentView] =
+    useState<CurrentViewType>("questionBank");
+  const [selectedSpecialties, setSelectedSpecialties] = useState<string[]>([]);
+  const [selectedBasicArea, setSelectedBasicArea] = useState<string[]>([]);
+  const [timeQuestions, setTimeQuestions] = useState(0);
 
-  const handleAnswer = (answer: number, index: number): void => {
+  const filteredQuestions = questionList.filter(
+    (question) =>
+      selectedSpecialties.includes(question.specialties) &&
+      selectedBasicArea.includes(question.basic_areas)
+  );
+  const handleTimeQuestionsChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setTimeQuestions(Number(event.target.value));
+  };
+
+  const handleAnswer = (answer: number, index: number) => {
     setUserAnswers([
       ...userAnswers.slice(0, index),
       answer,
@@ -20,35 +33,59 @@ const App = (): JSX.Element => {
     ]);
   };
 
-  const handleFinish = (): void => {
-    setCurrentView('Results');
+  const handleFinish = () => {
+    setCurrentView("results");
   };
 
-  const handleQuestionTimesChange = (newQuestionTimes: number[]): void => {
+  const handleQuestionTimesChange = (newQuestionTimes: number[]) => {
     setQuestionTimes(newQuestionTimes);
   };
 
   return (
     <>
-      {currentView === 'QuestionBank' && <QuestionBank onButtonClick={(): void => setCurrentView('Simulations')} />}
-      {currentView === 'Simulations' && <Simulations onButtonClick={(): void => setCurrentView('Questions')}/>}
-      {currentView === 'Results' ? (
-        <Results
-          userAnswers={userAnswers}
-          questionList={questionList}
-          questionTimes={questionTimes}
-          onButtonClick={() => setCurrentView('QuestionBank')}
-        />
-      ) : (
-        currentView === 'Questions' && <Questions
-          userAnswers={userAnswers}
-          onAnswer={handleAnswer}
-          questionList={questionList}
-          onFinish={handleFinish}
-          onQuestionTimesChange={handleQuestionTimesChange}
+      {currentView === "questionBank" && (
+        <QuestionBank onButtonClick={() => setCurrentView("simulations")} />
+      )}
+      {currentView === "simulations" && (
+        <Simulations
+          questionList={filteredQuestions}
+          selectedBasicArea={selectedBasicArea}
+          selectedSpecialties={selectedSpecialties}
+          timeQuestions={timeQuestions}
+          setSelectedSpecialties={setSelectedSpecialties}
+          setSelectedBasicArea={setSelectedBasicArea}
+          handleTimeQuestionsChange={handleTimeQuestionsChange}
+          onButtonClick={() => setCurrentView("questions")}
         />
       )}
-
+      {currentView === "results" ? (
+        <Results
+          userAnswers={userAnswers}
+          questionList={filteredQuestions}
+          questionTimes={questionTimes}
+          setSelectedSpecialties={setSelectedSpecialties}
+          setSelectedBasicArea={setSelectedBasicArea}
+          setTimeQuestions={setTimeQuestions}
+          onButtonClick={() => setCurrentView("questionBank")}
+        />
+      ) : (
+        currentView === "questions" &&
+        (filteredQuestions.length === 0 ? (
+          <p>
+            No hay preguntas que coincidan con las especialidades y áreas
+            básicas seleccionadas.
+          </p>
+        ) : (
+          <Questions
+            userAnswers={userAnswers}
+            onAnswer={handleAnswer}
+            questionList={filteredQuestions}
+            onFinish={handleFinish}
+            onQuestionTimesChange={handleQuestionTimesChange}
+            timeRemaining={timeQuestions * 60}
+          />
+        ))
+      )}
     </>
   );
 };
