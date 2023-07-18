@@ -9,7 +9,9 @@ import { VIEWTYPE } from "../constants/index";
 
 export interface Question {
   statement: string;
-  options: string[];
+  options: {
+    [key: string]: string
+  };
   correct_answer: number;
   specialties: string;
   basic_areas: string;
@@ -32,7 +34,6 @@ export interface QuestionsProps {
 }
 
 export interface SimulationsProps {
-  questionList: ListQuestion;
   selectedBasicArea: string[];
   selectedSpecialties: string[];
   timeQuestions: number;

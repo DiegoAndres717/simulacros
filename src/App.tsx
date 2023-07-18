@@ -6,7 +6,7 @@ import Results from "./components/Results ";
 import { CurrentViewType, Question } from "../types";
 
 const App = () => {
-  const [questionList, setQuestionList] = useState<Array<Question>>([]);
+  const [questions, setQuestions] = useState<Array<Question>>([]);
   const [userAnswers, setUserAnswers] = useState<number[]>([]);
   const [questionTimes, setQuestionTimes] = useState<number[]>([]);
   const [currentView, setCurrentView] =
@@ -15,11 +15,6 @@ const App = () => {
   const [selectedBasicArea, setSelectedBasicArea] = useState<string[]>([]);
   const [timeQuestions, setTimeQuestions] = useState(0);
 
-  const filteredQuestions = questionList.filter(
-    (question) =>
-      selectedSpecialties.includes(question.specialties) &&
-      selectedBasicArea.includes(question.basic_areas)
-  );
   const handleTimeQuestionsChange = (event: ChangeEvent<HTMLInputElement>) => {
     setTimeQuestions(Number(event.target.value));
   };
@@ -41,7 +36,6 @@ const App = () => {
   };
 
   const loadQuestions = () => {
-    console.log(selectedBasicArea, selectedSpecialties,timeQuestions);
     fetch('./data/questions.json', {
       headers: {
         'Accept': 'application/json',
@@ -54,7 +48,7 @@ const App = () => {
           time: timeQuestions
       })
     }).then(response => response.json()).then(data => {
-      setQuestionList(data);
+      setQuestions(data);
       setCurrentView('questions');
     });
 };
@@ -66,7 +60,6 @@ const App = () => {
       )}
       {currentView === "simulations" && (
         <Simulations
-          questionList={filteredQuestions}
           selectedBasicArea={selectedBasicArea}
           selectedSpecialties={selectedSpecialties}
           timeQuestions={timeQuestions}
@@ -79,7 +72,7 @@ const App = () => {
       {currentView === "results" ? (
         <Results
           userAnswers={userAnswers}
-          questionList={filteredQuestions}
+          questionList={questions}
           questionTimes={questionTimes}
           setSelectedSpecialties={setSelectedSpecialties}
           setSelectedBasicArea={setSelectedBasicArea}
@@ -88,7 +81,7 @@ const App = () => {
         />
       ) : (
         currentView === "questions" &&
-        (filteredQuestions.length === 0 ? (
+        (questions.length === 0 ? (
           <p>
             No hay preguntas que coincidan con las especialidades y áreas
             básicas seleccionadas.
@@ -97,7 +90,7 @@ const App = () => {
           <Questions
             userAnswers={userAnswers}
             onAnswer={handleAnswer}
-            questionList={filteredQuestions}
+            questionList={questions}
             onFinish={handleFinish}
             onQuestionTimesChange={handleQuestionTimesChange}
             timeRemaining={timeQuestions * 60}

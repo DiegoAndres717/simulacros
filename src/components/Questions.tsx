@@ -155,21 +155,22 @@ const Questions = ({
           </h2>
           <p className="mb-4 text-gray-600">{currentQuestion.statement}</p>
           <div className="mb-4">
-            {currentQuestion.options.map((option, index) => (
-              <label key={index}>
-                <label className="flex items-center mb-2 bg-slate-100 p-1 rounded-full pl-3">
+            {Object.values(currentQuestion.options).map((option, index) => (
+                <label key={index} className="flex items-center mb-2 bg-slate-100 p-1 rounded-full pl-3">
                   <input
                     value={index}
                     checked={selectedAnswer === index}
-                    onChange={(e) => setSelectedAnswer(Number(e.target.value))}
+                    onChange={(e) => { 
+                      console.log(e.target.value, Object.keys(currentQuestion.options)[index]);
+                      setSelectedAnswer(Number(e.target.value))
+                    }}
                     type="radio"
                     name="respuesta"
                     className="mr-2 accent-blue-700 h-4 w-4 cursor-pointer"
                   />
                   <span className="text-gray-700">{option}</span>
                 </label>
-              </label>
-            ))}
+))}
           </div>
           <div className="flex justify-end gap-x-4">
             <CustomButton

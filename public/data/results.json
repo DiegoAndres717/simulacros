@@ -2,8 +2,11 @@
   "score": "",
   "questions": [{
     "id": 1,
-    "question": "",
+    "statement": "",
+    "statement_image": null,
     "status": "Incorrecta",
-    "justification": ""
+    "justification": "",
+    "justification_image": null,
+    "bibliography": ""
   }]
 }
