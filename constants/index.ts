@@ -25,7 +25,7 @@ export const basicArea = [
     {name: 'Anatomía', label: 'Anatomía'},
     {name: 'Biología molecular', label: 'Biología molecular'},
     {name: 'Bioquímica', label: 'Bioquímica'},
-    {name: 'Anatomía', label: 'Anatomía'},
+    {name: 'Embriología', label: 'Embriología'},
     {name: 'Farmacología', label: 'Farmacología'},
     {name: 'Fisiología', label: 'Fisiología'},
     {name: 'Genética', label: 'Genética'},

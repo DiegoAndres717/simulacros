@@ -1,4 +1,4 @@
-import { ChangeEvent, Dispatch, SetStateAction } from "react";
+import { ChangeEvent, Dispatch, SetStateAction, useState } from 'react';
 import { SelectableItem } from "./types";
 export const handleNextQuestion = (
   selectedAnswer: number | null,
@@ -117,4 +117,21 @@ export const handleSelectAll = (
   } else {
     setSelectedItems([]);
   }
+};
+
+export const useSessionStorage = <T>(
+  key: string,
+  initialValue: T
+): [T, (value: T) => void] => {
+  const [storedValue, setStoredValue] = useState<T>(() => {
+    const item = sessionStorage.getItem(key);
+    return item ? JSON.parse(item) : initialValue;
+  });
+
+  const setValue = (value: T) => {
+    setStoredValue(value);
+    sessionStorage.setItem(key, JSON.stringify(value));
+  };
+
+  return [storedValue, setValue];
 };

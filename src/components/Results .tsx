@@ -9,7 +9,8 @@ interface ResultsProps {
   userAnswers: number[];
   questionTimes: number[];
   onButtonClick: () => void;
-  setTimeQuestions: Dispatch<SetStateAction<number>>
+  setUserAnswers: (value: number[]) => void
+  setTimeQuestions: (value: number) => void
   setSelectedSpecialties: Dispatch<SetStateAction<string[]>>
   setSelectedBasicArea: Dispatch<SetStateAction<string[]>>
 }
@@ -22,6 +23,7 @@ const Results = ({
   setTimeQuestions,
   setSelectedSpecialties,
   setSelectedBasicArea,
+  setUserAnswers
 }: ResultsProps) => {
   const correctAnswers = userAnswers.filter(
     (answer, index) => answer === questionList[index].correct_answer
@@ -29,7 +31,14 @@ const Results = ({
   const score = (correctAnswers.length / questionList.length) * 100;
 
   const handleFinish = () => {
+    //resetear los sessionStorage
+    sessionStorage.removeItem("userAnswers");
+    sessionStorage.removeItem("timeQuestions");
+    sessionStorage.removeItem("timeRemaining");
+    sessionStorage.removeItem("questions");
+    
     //resetear los input y checkbox
+    setUserAnswers([])
     setTimeQuestions(0)
     setSelectedSpecialties([])
     setSelectedBasicArea([])

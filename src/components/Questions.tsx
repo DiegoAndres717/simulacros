@@ -22,8 +22,10 @@ const Questions = ({
 }: QuestionsProps) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const currentQuestion = questionList[currentQuestionIndex];
-  const [timeRemaining, setTimeRemaining] =
-    useState<number>(initialTimeRemaining);
+  const [timeRemaining, setTimeRemaining] = useState(() => {
+    const storedTimeRemaining = sessionStorage.getItem("timeRemaining");
+    return storedTimeRemaining ? Number(storedTimeRemaining) : initialTimeRemaining;
+  });
   const [questionStartTime, setQuestionStartTime] = useState(Date.now());
   const [questionTimes, setQuestionTimes] = useState<number[]>([]);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -50,6 +52,10 @@ const Questions = ({
   }, [timeRemaining, onFinish]);
 
   useEffect(() => {
+    sessionStorage.setItem("timeRemaining", timeRemaining.toString());
+  }, [timeRemaining]);
+
+  useEffect(() => {
     if (currentQuestionIndex > 0) {
       const timeElapsed = Math.round((Date.now() - questionStartTime) / 1000);
       setQuestionTimes([
@@ -74,7 +80,7 @@ const Questions = ({
       questionList.length,
       setCurrentQuestionIndex,
       setSelectedAnswer,
-      () =>
+      () =>{
         handleFinish(
           selectedAnswer,
           currentQuestionIndex,
@@ -84,6 +90,8 @@ const Questions = ({
           onQuestionTimesChange,
           onFinish
         )
+        setTimeRemaining(0);
+      }
     );
   };
 
@@ -160,8 +168,7 @@ const Questions = ({
                   <input
                     value={index}
                     checked={selectedAnswer === index}
-                    onChange={(e) => { 
-                      console.log(e.target.value, Object.keys(currentQuestion.options)[index]);
+                    onChange={(e) => {
                       setSelectedAnswer(Number(e.target.value))
                     }}
                     type="radio"
