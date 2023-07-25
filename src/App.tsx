@@ -3,8 +3,8 @@ import QuestionBank from "./components/QuestionBank";
 import Questions from "./components/Questions";
 import Simulations from "./components/Simulations";
 import Results from "./components/Results ";
-import { CurrentViewType, Question } from "../types";
-import { useSessionStorage } from "../utils";
+import { CurrentViewType, FormErrors, Question } from "../types";
+import { useSessionStorage, validateInput } from "../utils";
 
 const App = () => {
   const [questions, setQuestions] = useSessionStorage<Array<Question>>(
@@ -24,11 +24,15 @@ const App = () => {
   const [selectedBasicArea, setSelectedBasicArea] = useState<string[]>([]);
   const [timeQuestions, setTimeQuestions] = useSessionStorage(
     "timeQuestions",
-    0
+    40
   );
+  const [formErrors, setFormErrors] = useState<FormErrors>({});
 
   const handleTimeQuestionsChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setTimeQuestions(Number(event.target.value));
+    const value = event.target.value;
+    setTimeQuestions(Number(value));
+    const isValid = validateInput(Number(value), "number", { min: 40 });
+    setFormErrors((prev) => ({ ...prev, timeQuestions: !isValid }));
   };
 
   const handleAnswer = (answer: number, index: number) => {
@@ -77,6 +81,8 @@ const App = () => {
           selectedBasicArea={selectedBasicArea}
           selectedSpecialties={selectedSpecialties}
           timeQuestions={timeQuestions}
+          formErrors={formErrors}
+          setFormErrors={setFormErrors}
           setSelectedSpecialties={setSelectedSpecialties}
           setSelectedBasicArea={setSelectedBasicArea}
           handleTimeQuestionsChange={handleTimeQuestionsChange}

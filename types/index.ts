@@ -37,10 +37,20 @@ export interface SimulationsProps {
   selectedBasicArea: string[];
   selectedSpecialties: string[];
   timeQuestions: number;
+  formErrors: FormErrors
+  setFormErrors: Dispatch<SetStateAction<FormErrors>>
   onButtonClick: () => void;
   setSelectedSpecialties: Dispatch<SetStateAction<string[]>>;
   setSelectedBasicArea: Dispatch<SetStateAction<string[]>>;
   handleTimeQuestionsChange: (event: ChangeEvent<HTMLInputElement>) => void;
+}
+
+export interface FormErrors {
+  numQuestions?: boolean;
+  timeQuestions?: boolean;
+  checkSpecialties?: boolean;
+  checkBasicArea?: boolean
+  nameQuestions?: boolean
 }
 
 export interface CustomButtonProps {
@@ -63,6 +73,63 @@ export interface CustomInputProps {
   isChecked?: boolean;
   handleChange?: ChangeEventHandler<HTMLInputElement>;
   inputStyle?: string;
-  min?: string;
-  max?: string;
+  min?: number;
+  max?: number;
+}
+
+export interface ValidationRules {
+  min?: number;
+  max?: number;
+}
+
+export interface Option {
+  [key: string]: string
+}
+
+export interface Specialties {
+  title: string;
+  minimum?: number;
+  options: Option[];
+  type: "checkbox";
+}
+
+export interface BasicArea {
+  title: string;
+  minimum?: number;
+  options: Option[];
+  type: "checkbox";
+}
+
+export interface GeneralCulture {
+  title: string;
+  minimum?: number;
+  options: Option[];
+  type: "checkbox";
+}
+
+export interface NumQuestions {
+  title: string;
+  minimum?: number;
+  type: "number";
+}
+
+export interface TimeMinutes {
+  title: string;
+  minimum?: number;
+  type: "number";
+}
+
+export interface NameSimulation {
+  title: string;
+  defaultValue: string;
+  type: "text";
+}
+
+export interface DataSettings {
+  specialties: Specialties;
+  basicArea: BasicArea;
+  generalCulture: GeneralCulture;
+  numQuestions: NumQuestions;
+  timeMinutes: TimeMinutes;
+  nameSimulation: NameSimulation;
 }

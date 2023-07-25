@@ -1,5 +1,5 @@
-import { ChangeEvent, Dispatch, SetStateAction, useState } from 'react';
-import { SelectableItem } from "./types";
+import { ChangeEvent, Dispatch, SetStateAction, useState } from "react";
+import { SelectableItem, ValidationRules } from "./types";
 export const handleNextQuestion = (
   selectedAnswer: number | null,
   currentQuestionIndex: number,
@@ -67,25 +67,28 @@ export const handleStart = (
   toast: any,
   onButtonClick: () => void
 ) => {
+  let hasError = false;
+
   // Validar la entrada del usuario
   if (selectedSpecialties.length < 4) {
-    toast.error("Por favor, selecciona al menos 4 especialidades");
-    return;
+    hasError = true;
   }
   if (selectedBasicArea.length === 0) {
-    toast.error("Por favor, selecciona al menos una área básica.");
-    return;
+    hasError = true;
   }
   if (numQuestions < 20 || numQuestions > 100) {
-    toast.error("Por favor, elige un número de preguntas entre 20 y 100.");
-    return;
+    hasError = true;
   }
-  if (timeQuestions <= 0) {
-    toast.error("Por favor, elige un tiempo válido.");
-    return;
+  if (timeQuestions < 40) {
+    hasError = true;
   }
   if (nameQuestions.length === 0) {
-    toast.error("Por favor, escriba un nombre de silumacro");
+    hasError = true;
+  }
+
+  // Mostrar un mensaje de error si alguna validación falló
+  if (hasError) {
+    toast.error("Por favor, verifica que todos los campos estén correctos.");
     return;
   }
 
@@ -93,19 +96,24 @@ export const handleStart = (
   onButtonClick();
 };
 
+
 export const handleChangeGeneral = (
   event: ChangeEvent<HTMLInputElement>,
-  prevSelectedStudyArea: Dispatch<SetStateAction<string[]>>
+  selectedItems: string[],
+  setState: Dispatch<SetStateAction<string[]>>
 ) => {
   const item = event.target.name;
+  let newSelectedItems;
   if (event.target.checked) {
-    prevSelectedStudyArea((prevSelectedItems) => [...prevSelectedItems, item]);
+    newSelectedItems = [...selectedItems, item];
+    setState(newSelectedItems);
   } else {
-    prevSelectedStudyArea((prevSelectedItems) =>
-      prevSelectedItems.filter((i) => i !== item)
-    );
+    newSelectedItems = selectedItems.filter((i) => i !== item);
+    setState(newSelectedItems);
   }
+  return newSelectedItems;
 };
+
 
 export const handleSelectAll = (
   event: ChangeEvent<HTMLInputElement>,
@@ -135,3 +143,35 @@ export const useSessionStorage = <T>(
 
   return [storedValue, setValue];
 };
+
+export const validateInput = (
+  value: string | number | boolean,
+  type: string,
+  rules: ValidationRules = {}
+) => {
+  switch (type) {
+    case "number":
+      if (typeof value === "number") {
+        if (rules.min !== undefined && value < rules.min) {
+          return false;
+        }
+        if (rules.max !== undefined && value > rules.max) {
+          return false;
+        }
+      }
+      return true;
+    case "text":
+      if (typeof value === "string") {
+        return value.length > 0;
+      }
+      return false
+    case "checkbox":
+      if (typeof value === 'boolean') {
+        return value === true;
+      }
+      return false
+    default:
+      return true;
+  }
+};
+

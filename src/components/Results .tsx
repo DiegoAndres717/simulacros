@@ -39,7 +39,7 @@ const Results = ({
     
     //resetear los input y checkbox
     setUserAnswers([])
-    setTimeQuestions(0)
+    setTimeQuestions(40)
     setSelectedSpecialties([])
     setSelectedBasicArea([])
 
