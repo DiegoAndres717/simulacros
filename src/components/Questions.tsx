@@ -18,6 +18,7 @@ const Questions = ({
   onQuestionTimesChange,
   onAnswer,
   userAnswers,
+  isTimeUnlimited,
   timeRemaining: initialTimeRemaining,
 }: QuestionsProps) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -135,6 +136,7 @@ const Questions = ({
         <Countdown
           timeRemaining={timeRemaining}
           formattedTimeRemaining={formattedTimeRemaining}
+          isTimeUnlimited={isTimeUnlimited}
         />
       </div>
 

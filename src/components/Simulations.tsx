@@ -22,6 +22,7 @@ export default function Simulations({
   onButtonClick,
   setSelectedSpecialties,
   setSelectedBasicArea,
+  handleTimeUnlimitedChange,
   handleTimeQuestionsChange,
 }: SimulationsProps) {
   const [numQuestions, setNumQuestions] = useState(20);
@@ -183,7 +184,8 @@ export default function Simulations({
               titleLabel="Ilimitado"
               styleLabel="flex items-center font-semibold text-slate-700 ml-2 lg:ml-0"
               inputStyle="mr-2 h-4 w-4 accent-blue-700 cursor-pointer"
-              labelPosition="after"/>
+              labelPosition="after"
+              handleChange={handleTimeUnlimitedChange}/>
             </div>
           </div>
           <div className="flex flex-col max-w-sm">

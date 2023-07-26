@@ -27,6 +27,7 @@ const App = () => {
     40
   );
   const [formErrors, setFormErrors] = useState<FormErrors>({});
+  const [isTimeUnlimited, setIsTimeUnlimited] = useState(false);
 
   const handleTimeQuestionsChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
@@ -49,6 +50,9 @@ const App = () => {
 
   const handleQuestionTimesChange = (newQuestionTimes: number[]) => {
     setQuestionTimes(newQuestionTimes);
+  };
+  const handleTimeUnlimitedChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setIsTimeUnlimited(event.target.checked);
   };
 
   const loadQuestions = () => {
@@ -87,6 +91,7 @@ const App = () => {
           setSelectedBasicArea={setSelectedBasicArea}
           handleTimeQuestionsChange={handleTimeQuestionsChange}
           onButtonClick={() => loadQuestions()}
+          handleTimeUnlimitedChange={handleTimeUnlimitedChange}
         />
       )}
       {currentView === "results" ? (
@@ -120,6 +125,7 @@ const App = () => {
             onAnswer={handleAnswer}
             questionList={questions}
             onFinish={handleFinish}
+            isTimeUnlimited={isTimeUnlimited}
             onQuestionTimesChange={handleQuestionTimesChange}
             timeRemaining={timeQuestions * 60}
           />

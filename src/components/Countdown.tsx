@@ -3,9 +3,10 @@ import { useState, useEffect } from 'react';
 interface CountDownProps {
   formattedTimeRemaining: string
   timeRemaining: number
+  isTimeUnlimited: boolean;
 }
 
-export default function Countdown({ timeRemaining, formattedTimeRemaining }: CountDownProps) {
+export default function Countdown({ timeRemaining, formattedTimeRemaining, isTimeUnlimited }: CountDownProps) {
   const [timeLeft, setTimeLeft] = useState(timeRemaining);
 
   useEffect(() => {
@@ -29,7 +30,11 @@ export default function Countdown({ timeRemaining, formattedTimeRemaining }: Cou
       />
       <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
         <p className='font-bold text-sm'>Tiempo</p>
-        {formattedTimeRemaining}
+        {isTimeUnlimited ? (
+        <p className='text-xs font-semibold'>Ilimitado</p>
+      ) : (
+        <p>{formattedTimeRemaining}</p>
+      )}
       </div>
     </div>
   );

@@ -31,6 +31,7 @@ export interface QuestionsProps {
   onAnswer: (answer: number, index: number) => void;
   userAnswers: number[];
   timeRemaining: number;
+  isTimeUnlimited: boolean
 }
 
 export interface SimulationsProps {
@@ -43,6 +44,7 @@ export interface SimulationsProps {
   setSelectedSpecialties: Dispatch<SetStateAction<string[]>>;
   setSelectedBasicArea: Dispatch<SetStateAction<string[]>>;
   handleTimeQuestionsChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  handleTimeUnlimitedChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export interface FormErrors {
