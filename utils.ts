@@ -84,7 +84,7 @@ export const handleStart = (
     hasError = true;
     formErrors.numQuestions = true;
   }
-  if (timeQuestions < 40) {
+  if (timeQuestions < 1) {
     hasError = true;
     formErrors.timeQuestions = true;
   }

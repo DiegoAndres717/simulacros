@@ -39,12 +39,14 @@ const Questions = ({
   }, [currentQuestionIndex, userAnswers]);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTimeRemaining((time) => time - 1);
-    }, 1000);
-
-    return () => clearInterval(intervalId);
-  }, []);
+    if (!isTimeUnlimited) {
+      const intervalId = setInterval(() => {
+        setTimeRemaining((time) => time - 1);
+      }, 1000);
+  
+      return () => clearInterval(intervalId);
+    }
+  }, [isTimeUnlimited]);
 
   useEffect(() => {
     if (timeRemaining === 0) {

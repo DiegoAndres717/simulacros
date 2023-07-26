@@ -71,7 +71,7 @@
   },
   "timeMinutes": {
     "title": "Elige el tiempo (minutos)",
-    "minimum": 40,
+    "minimum": 1,
     "maximum": 0,
     "type": "number"
   },
