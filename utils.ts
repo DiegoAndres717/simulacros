@@ -1,5 +1,5 @@
 import { ChangeEvent, Dispatch, SetStateAction, useState } from "react";
-import { SelectableItem, ValidationRules } from "./types";
+import { FormErrors, SelectableItem, ValidationRules } from "./types";
 export const handleNextQuestion = (
   selectedAnswer: number | null,
   currentQuestionIndex: number,
@@ -65,30 +65,38 @@ export const handleStart = (
   nameQuestions: string,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   toast: any,
-  onButtonClick: () => void
+  onButtonClick: () => void,
+  handleFormErrors: (errors: FormErrors) => void
 ) => {
   let hasError = false;
+  const formErrors: FormErrors = {};
 
   // Validar la entrada del usuario
   if (selectedSpecialties.length < 4) {
     hasError = true;
+    formErrors.checkSpecialties = true;
   }
   if (selectedBasicArea.length === 0) {
     hasError = true;
+    formErrors.checkBasicArea = true;
   }
   if (numQuestions < 20 || numQuestions > 100) {
     hasError = true;
+    formErrors.numQuestions = true;
   }
   if (timeQuestions < 40) {
     hasError = true;
+    formErrors.timeQuestions = true;
   }
   if (nameQuestions.length === 0) {
     hasError = true;
+    formErrors.nameQuestions = true;
   }
 
   // Mostrar un mensaje de error si alguna validación falló
   if (hasError) {
     toast.error("Por favor, verifica que todos los campos estén correctos.");
+    handleFormErrors(formErrors);
     return;
   }
 

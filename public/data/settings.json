@@ -66,11 +66,13 @@
   "numQuestions": {
     "title": "Elige el número de preguntas (mínimo 20, máximo 100)",
     "minimum": 20,
+    "maximum": 100,
     "type": "number"
   },
   "timeMinutes": {
     "title": "Elige el tiempo (minutos)",
     "minimum": 40,
+    "maximum": 0,
     "type": "number"
   },
   "nameSimulation": {

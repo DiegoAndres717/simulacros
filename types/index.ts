@@ -110,6 +110,7 @@ export interface GeneralCulture {
 export interface NumQuestions {
   title: string;
   minimum?: number;
+  maximum?: number;
   type: "number";
 }
 

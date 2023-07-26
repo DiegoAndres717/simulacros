@@ -8,7 +8,7 @@ import {
   handleStart,
   validateInput,
 } from "../../utils";
-import { DataSettings, SimulationsProps } from "../../types";
+import { DataSettings, FormErrors, SimulationsProps } from "../../types";
 import CustomButton from "./CustomButton";
 import CustomInput from "./CustomInput";
 import { basicArea, specialties } from "../../constants";
@@ -68,7 +68,7 @@ export default function Simulations({
   const handleNumQuestionsChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = Number(event.target.value);
     setNumQuestions(value);
-    const isValid = validateInput(value, "number", { min: settings?.numQuestions.minimum, max: 100 });
+    const isValid = validateInput(value, "number", { min: settings?.numQuestions.minimum, max: settings?.numQuestions.maximum });
     setFormErrors((prev) => ({ ...prev, numQuestions: !isValid }));
   };
 
@@ -79,6 +79,10 @@ export default function Simulations({
     setFormErrors((prev) => ({ ...prev, nameQuestions: !isValid }));
   };
 
+  const handleFormErrors = (errors: FormErrors) => {
+    setFormErrors(errors);
+  };
+  
   const handleStartQuestions = () => {
     handleStart(
       selectedSpecialties,
@@ -87,7 +91,8 @@ export default function Simulations({
       timeQuestions,
       nameQuestions,
       toast,
-      onButtonClick
+      onButtonClick,
+      handleFormErrors
     );
   };
 
@@ -156,7 +161,8 @@ export default function Simulations({
                 max={100}
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-4 flex">
+            <div className="flex flex-col">
               <CustomInput
                 titleLabel={settings.timeMinutes.title}
                 styleLabel="text-lg font-bold mb-2 text-gray-700"
@@ -170,6 +176,14 @@ export default function Simulations({
                 }`}
                 min={settings.timeMinutes.minimum}
               />
+              <p className="text-slate-700 text-xs">Tiempo sugerido ({settings.timeMinutes.minimum} min)</p>
+              </div>
+              <CustomInput 
+              inputType="checkbox"
+              titleLabel="Ilimitado"
+              styleLabel="flex items-center font-semibold text-slate-700 ml-2 lg:ml-0"
+              inputStyle="mr-2 h-4 w-4 accent-blue-700 cursor-pointer"
+              labelPosition="after"/>
             </div>
           </div>
           <div className="flex flex-col max-w-sm">
