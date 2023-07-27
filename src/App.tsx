@@ -123,6 +123,7 @@ const App = () => {
           <Questions
             userAnswers={userAnswers}
             onAnswer={handleAnswer}
+            setUserAnswers={setUserAnswers}
             questionList={questions}
             onFinish={handleFinish}
             isTimeUnlimited={isTimeUnlimited}

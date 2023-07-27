@@ -29,6 +29,7 @@ export interface QuestionsProps {
   onFinish: () => void;
   onQuestionTimesChange: (questionTimes: number[]) => void;
   onAnswer: (answer: number, index: number) => void;
+  setUserAnswers: (value: number[]) => void
   userAnswers: number[];
   timeRemaining: number;
   isTimeUnlimited: boolean

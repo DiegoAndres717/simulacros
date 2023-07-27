@@ -11,6 +11,7 @@ import CustomButton from "./CustomButton";
 import { ArrowLeft } from "./icons/ArrowLeft";
 import { ArrowRight } from "./icons/ArrowRight";
 import CustomInput from "./CustomInput";
+import { Toaster, toast } from "sonner";
 
 const Questions = ({
   questionList,
@@ -18,6 +19,7 @@ const Questions = ({
   onQuestionTimesChange,
   onAnswer,
   userAnswers,
+  setUserAnswers,
   isTimeUnlimited,
   timeRemaining: initialTimeRemaining,
 }: QuestionsProps) => {
@@ -33,6 +35,25 @@ const Questions = ({
   const [markedQuestions, setMarkedQuestions] = useState<boolean[]>(
     new Array(questionList.length).fill(false)
   );
+  const [viewedQuestions, setViewedQuestions] = useState<boolean[]>(
+    new Array(questionList.length).fill(false)
+  );
+  
+  useEffect(() => {
+    setViewedQuestions((prev) =>
+      prev.map((viewed, index) => (index === currentQuestionIndex ? true : viewed))
+    );
+  }, [currentQuestionIndex]);
+
+  useEffect(() => {
+    if (isQuestionAnswered(currentQuestionIndex)) {
+      setMarkedQuestions((prev) =>
+        prev.map((marked, index) =>
+          index === currentQuestionIndex ? false : marked
+        )
+      );
+    }
+  }, [currentQuestionIndex, userAnswers]);
 
   useEffect(() => {
     setSelectedAnswer(userAnswers[currentQuestionIndex]);
@@ -75,7 +96,29 @@ const Questions = ({
     setQuestionStartTime(Date.now());
   }, [currentQuestionIndex]);
 
+  const isQuestionAnswered = (questionIndex: number) => {
+    return userAnswers[questionIndex] !== undefined;
+  };
+  
   const handleNext = () => {
+    if (!isQuestionAnswered(currentQuestionIndex)) {
+      setMarkedQuestions((prev) =>
+        prev.map((marked, index) =>
+          index === currentQuestionIndex ? true : marked
+        )
+      );
+    }
+    
+    if (currentQuestionIndex === questionList.length - 1) {
+      const unansweredQuestions = questionList.filter(
+        (_, index) => !isQuestionAnswered(index)
+      );
+      
+      if (unansweredQuestions.length > 0) {
+        toast.error("Hay preguntas sin responder. Por favor, responda todas las preguntas antes de terminar.");
+        return;
+      }
+    }
     handleNextQuestion(
       selectedAnswer,
       currentQuestionIndex,
@@ -113,6 +156,7 @@ const Questions = ({
 
   return (
     <div className="p-4">
+      <Toaster richColors position="top-center" />
       <div className="flex justify-between items-center mb-4">
         <div className="ml-8 text-lg font-semibold">
           Pregunta {currentQuestionIndex + 1} de {questionList.length}
@@ -150,12 +194,15 @@ const Questions = ({
                 key={index}
                 className={
                   currentQuestionIndex === index
-                    ? "flex items-center justify-center rounded-sm gap-x-2 font-semibold bg-slate-300 w-full "
+                    ? "flex items-center justify-center rounded-sm text-black gap-x-2 font-semibold bg-slate-300 w-full "
                     : ""
                 }
               >
-                {index + 1}
+                <div className="text-black">
+                {!viewedQuestions[index] && <span>•</span>}
+                <span className="ml-2">{index + 1}</span>
                 {markedQuestions[index] && <span>🚩</span>}
+                </div>
               </li>
             ))}
           </ul>
@@ -173,7 +220,10 @@ const Questions = ({
                     value={index}
                     checked={selectedAnswer === index}
                     onChange={(e) => {
-                      setSelectedAnswer(Number(e.target.value))
+                      setSelectedAnswer(Number(e.target.value));
+    const newAnswers = [...userAnswers];
+    newAnswers[currentQuestionIndex] = Number(e.target.value);
+    setUserAnswers(newAnswers);
                     }}
                     type="radio"
                     name="respuesta"
