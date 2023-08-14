@@ -27,7 +27,7 @@ export default function BasicArea({
             name={`${basic.name}`}
             checked={selectedBasicArea.includes(basic.name)}
             type={basicArea.type}
-            className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer"
+            className="mr-2 h-4 w-4 accent-check-color cursor-pointer"
           />
           {basic.label}
         </label>
@@ -36,7 +36,7 @@ export default function BasicArea({
         <input
           onChange={handleSelectAllBasicArea}
           type="checkbox"
-          className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer"
+          className="mr-2 h-4 w-4 accent-check-color cursor-pointer"
         />
         Todas las áreas básicas
       </label>

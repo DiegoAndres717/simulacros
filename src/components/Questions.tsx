@@ -221,9 +221,9 @@ const Questions = ({
                     checked={selectedAnswer === index}
                     onChange={(e) => {
                       setSelectedAnswer(Number(e.target.value));
-    const newAnswers = [...userAnswers];
-    newAnswers[currentQuestionIndex] = Number(e.target.value);
-    setUserAnswers(newAnswers);
+                      const newAnswers = [...userAnswers];
+                      newAnswers[currentQuestionIndex] = Number(e.target.value);
+                      setUserAnswers(newAnswers);
                     }}
                     type="radio"
                     name="respuesta"

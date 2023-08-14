@@ -38,7 +38,7 @@
     "type": "checkbox"
   },
   "basicArea": {
-    "title": "Elige las áreas básicas",
+    "title": "Elige las áreas básicas (opcional)",
     "minimum": 1,
     "options": [
       { "name": "Anatomía", "label": "Anatomía" },
@@ -56,7 +56,7 @@
     "type": "checkbox"
   },
   "generalCulture":{
-    "title": "Cultura general",
+    "title": "Cultura general (opcional)",
     "minimum": 0,
     "options": [
         {"name": "Añadir", "label": "Añadir"}

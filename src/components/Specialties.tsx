@@ -24,7 +24,7 @@ export default function Specialties({
               checked={selectedSpecialties.includes(specialty.name)}
               name={specialty.name}
               type={specialties.type}
-              className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer"
+              className="mr-2 h-4 w-4 accent-check-color cursor-pointer form-checkbox rounded-full"
             />
             {specialty.label}
           </label>
@@ -33,7 +33,7 @@ export default function Specialties({
         <input
           onChange={handleSelectAllSpecialties}
           type="checkbox"
-          className="mr-2 h-4 w-4 accent-blue-700 cursor-pointer"
+          className="mr-2 h-4 w-4 accent-check-color cursor-pointer"
         />
         Todas las Especialidades
       </label>
