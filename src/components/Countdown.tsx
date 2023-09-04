@@ -24,7 +24,7 @@ export default function Countdown({ timeRemaining, formattedTimeRemaining, isTim
     <div className="relative w-20 h-20 rounded-full border-4 border-gray-200">
       <div
         className={`absolute top-0 left-0 w-full h-full rounded-full ${
-          isWarning && !isTimeUnlimited ? 'bg-orange-400' : 'bg-blue-300'
+          isWarning && !isTimeUnlimited ? 'bg-orange-400' : 'bg-green-300'
         }`}
         style={{ clipPath: `inset(${progress}% 0 0 0)` }}
       />

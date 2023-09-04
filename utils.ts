@@ -76,10 +76,10 @@ export const handleStart = (
     hasError = true;
     formErrors.checkSpecialties = true;
   }
-  if (selectedBasicArea.length === 0) {
+  /* if (selectedBasicArea.length === 0) {
     hasError = true;
     formErrors.checkBasicArea = true;
-  }
+  } */
   if (numQuestions < 20 || numQuestions > 100) {
     hasError = true;
     formErrors.numQuestions = true;

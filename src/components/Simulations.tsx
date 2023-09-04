@@ -138,11 +138,11 @@ export default function Simulations({
             <h2 className="text-lg font-bold mb-2 text-center md:text-left text-typogra">
               {settings?.basicArea.title}
             </h2>
-            {formErrors.checkBasicArea && (
+            {/* {formErrors.checkBasicArea && (
               <p className="text-red-500">
                 Debes seleccionar al menos 1 área básica
               </p>
-            )}
+            )} */}
             <BasicArea
               handleBasicAreaChange={handleBasicAreaChange}
               handleSelectAllBasicArea={handleSelectAllBasicArea}
@@ -156,7 +156,7 @@ export default function Simulations({
               <CustomInput
                 inputType="checkbox"
                 titleLabel="Añadir"
-                inputStyle="mr-2 h-4 w-4 accent-check-color cursor-pointer"
+                inputStyle="mr-2 h-5 w-5 cursor-pointer form-checkbox bg-white rounded-full border border-gray-300 appearance-none outline-none checked:bg-check-color"
                 styleLabel="flex items-center text-slate-700"
                 labelPosition="after"
               />
@@ -200,7 +200,7 @@ export default function Simulations({
                 <CustomInput
                   inputType="checkbox"
                   titleLabel="Ilimitado"
-                  styleLabel="flex items-center font-semibold text-slate-700 ml-2 lg:ml-0"
+                  styleLabel="flex items-center font-semibold text-slate-700 ml-2 lg:ml-0 lg:mr-40 mt-9 sm:mt-9 md:mt-0"
                   inputStyle="mr-2 h-4 w-4 accent-check-color cursor-pointer"
                   labelPosition="after"
                   handleChange={handleTimeUnlimitedChange}
@@ -219,7 +219,7 @@ export default function Simulations({
                 inputType={settings.nameSimulation.type}
                 handleChange={handleNameQuestionsChange}
                 value={nameQuestions}
-                inputStyle="border rounded p-1 w-full"
+                inputStyle="border rounded p-1 w-full lg:max-w-xs"
               />
             </div>
             <div className="flex justify-center mt-4">

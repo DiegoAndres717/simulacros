@@ -8,7 +8,8 @@ module.exports = {
         'btn-primary-hover': '#079995',
         'typogra': '#0B2A4A',
         'bg-primary': '#D9D9D9',
-        'check-color': '#0B2A4A'
+        'check-color': '#0B2A4A',
+        'point-color': '#00AEA9'
       }
     },
   },

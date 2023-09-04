@@ -27,7 +27,7 @@ const App = () => {
     40
   );
   const [formErrors, setFormErrors] = useState<FormErrors>({});
-  const [isTimeUnlimited, setIsTimeUnlimited] = useState(false);
+  const [isTimeUnlimited, setIsTimeUnlimited] = useSessionStorage("isTimeUnlimited", false);
 
   const handleTimeQuestionsChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
@@ -103,6 +103,7 @@ const App = () => {
           setSelectedBasicArea={setSelectedBasicArea}
           setTimeQuestions={setTimeQuestions}
           setUserAnswers={setUserAnswers}
+          setIsTimeUnlimited={setIsTimeUnlimited}
           onButtonClick={() => setCurrentView("questionBank")}
         />
       ) : (

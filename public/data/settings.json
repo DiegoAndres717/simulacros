@@ -64,7 +64,7 @@
     "type": "checkbox"
   },
   "numQuestions": {
-    "title": "Elige el número de preguntas (mínimo 20, máximo 100)",
+    "title": "Elige el número de preguntas (mín 20 - máx 100)",
     "minimum": 20,
     "maximum": 100,
     "type": "number"

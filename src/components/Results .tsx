@@ -13,6 +13,7 @@ interface ResultsProps {
   setTimeQuestions: (value: number) => void
   setSelectedSpecialties: Dispatch<SetStateAction<string[]>>
   setSelectedBasicArea: Dispatch<SetStateAction<string[]>>
+  setIsTimeUnlimited: (value: boolean) => void
 }
 
 const Results = ({
@@ -23,7 +24,8 @@ const Results = ({
   setTimeQuestions,
   setSelectedSpecialties,
   setSelectedBasicArea,
-  setUserAnswers
+  setUserAnswers,
+  setIsTimeUnlimited
 }: ResultsProps) => {
   const correctAnswers = userAnswers.filter(
     (answer, index) => answer === questionList[index].correct_answer
@@ -40,6 +42,7 @@ const Results = ({
     //resetear los input y checkbox
     setUserAnswers([])
     setTimeQuestions(40)
+    setIsTimeUnlimited(false)
     setSelectedSpecialties([])
     setSelectedBasicArea([])
 
