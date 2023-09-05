@@ -1,50 +1,22 @@
-import { Dispatch, SetStateAction } from "react";
-import { ListQuestion } from "../../types";
+import { Results } from "../../types";
 import CustomButton from "./CustomButton";
 import { ArrowRight } from "./icons/ArrowRight";
 
-
 interface ResultsProps {
-  questionList: ListQuestion;
-  userAnswers: number[];
-  questionTimes: number[];
+  results: Results,
   onButtonClick: () => void;
-  setUserAnswers: (value: number[]) => void
-  setTimeQuestions: (value: number) => void
-  setSelectedSpecialties: Dispatch<SetStateAction<string[]>>
-  setSelectedBasicArea: Dispatch<SetStateAction<string[]>>
-  setIsTimeUnlimited: (value: boolean) => void
 }
 
 const Results = ({
-  questionList,
-  userAnswers,
-  questionTimes,
-  onButtonClick,
-  setTimeQuestions,
-  setSelectedSpecialties,
-  setSelectedBasicArea,
-  setUserAnswers,
-  setIsTimeUnlimited
+  results,
+  onButtonClick
 }: ResultsProps) => {
-  const correctAnswers = userAnswers.filter(
-    (answer, index) => answer === questionList[index].correct_answer
-  );
-  const score = (correctAnswers.length / questionList.length) * 100;
-
   const handleFinish = () => {
     //resetear los sessionStorage
     sessionStorage.removeItem("userAnswers");
     sessionStorage.removeItem("timeQuestions");
     sessionStorage.removeItem("timeRemaining");
     sessionStorage.removeItem("questions");
-    
-    //resetear los input y checkbox
-    setUserAnswers([])
-    setTimeQuestions(40)
-    setIsTimeUnlimited(false)
-    setSelectedSpecialties([])
-    setSelectedBasicArea([])
 
     onButtonClick();
   }
@@ -55,14 +27,14 @@ const Results = ({
         <div className="flex items-center gap-x-3">
           <h2 className="text-lg font-medium text-gray-800">Respuestas</h2>
           <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full">
-            {questionList.length}
+            {results.total}
           </span>
         </div>
         <p className="text-gray-700">
-          Porcentaje de respuestas correctas: {score.toFixed(2)}%
+          Porcentaje de respuestas correctas: {results.score.toFixed(2).replace('.00','')}%
         </p>
         <p className="text-gray-700">
-          Respuestas correctas: {correctAnswers.length} de {questionList.length}
+          Respuestas correctas: {results.correct} de {results.total}
         </p>
 
         <div className="flex flex-col mt-6">
@@ -108,7 +80,7 @@ const Results = ({
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200 text-center">
-                    {questionList.map((question, index) => (
+                    {results.questions.map((question, index) => (
                       <tr key={index}>
                         <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
                           <p className="text-sm font-normal text-gray-600">
@@ -116,28 +88,28 @@ const Results = ({
                           </p>
                         </td>
                         <td className="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
-                          <div className="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60">
-                            {userAnswers[index] === question.correct_answer ? (
+                          <div className={`inline-flex items-center px-3 py-1 rounded-full gap-x-2 ${question.is_correct ?"bg-emerald-100/60":"bg-red-100/60"}`}>
+                            {question.is_correct ? (
                               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
                             ) : (
                               <span className="h-1.5 w-1.5 rounded-full bg-red-500"></span>
                             )}
-                            {userAnswers[index] === question.correct_answer ? (
-                              <h2 className="text-sm font-normal text-emerald-500">
+                            {question.is_correct ? (
+                              <span className="text-sm font-normal text-emerald-500">
                                 correcta
-                              </h2>
+                              </span>
                             ) : (
-                              <h2 className="text-sm font-normal text-red-500">
+                              <span className="text-sm font-normal text-red-500">
                                 incorrecta
-                              </h2>
+                              </span>
                             )}
                           </div>
                         </td>
                         <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-                          {question.specialties}
+                          {question.specialty}
                         </td>
                         <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-                          {questionTimes[index]}
+                          {/* {questionTimes[index]} */}
                         </td>
                       </tr>
                     ))}

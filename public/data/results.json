@@ -1,12 +1,1401 @@
 {
-  "score": "",
-  "questions": [{
-    "id": 1,
-    "statement": "",
-    "statement_image": null,
-    "status": "Incorrecta",
-    "justification": "",
-    "justification_image": null,
-    "bibliography": ""
-  }]
+  "score": 18,
+  "total": 34,
+  "correct": 6,
+  "questions": [
+      {
+          "id": "11",
+          "statement": "Se realiza un estudio sobre pacientes fumadores de al menos un paquete diario durante 30 a\u00f1os. Se somete a pruebas de funci\u00f3n pulmonar a estos pacientes, y se encuentra que un subgrupo importante de ellos tiene una reducci\u00f3n de FEV 1, una CVF de normal a reducida y cocientes FEV 1 \/CVF inferiores al 70%. Se analizan los datos de autopsia del subgrupo de individuos del estudio con un cociente FEV 1 \/CVF bajo. \u00bfCu\u00e1l de las siguientes estructuras respiratorias pulmonares es m\u00e1s probable que resulte afectada por el proceso patol\u00f3gico de base?",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Conducto alveolar",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Saco alveolar",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Bronquios",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "D",
+                  "label": "Bronqu\u00edolo respiratorio",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Patolog\u00eda",
+          "type": "Cl\u00ednicas",
+          "justification": "Bronqu\u00edolo respiratorio. El enfisema centrolobulillar se produce por una lesi\u00f3n de la parte central del \u00e1cino pulmonar, con una dilataci\u00f3n que afecta principalmente a los bronqu\u00edolos respiratorios. Los conductos y sacos alveolares distales est\u00e1n relativamente respetados. Los bronquios tienen cart\u00edlago, que no resulta afectado en presencia de enfisema. En el enfisema panacinar se afecta todo el lobulillo pulmonar, desde el bronqu\u00edolo respiratorio a los alv\u00e9olos terminales. En el enfisema paraseptal resulta afectado el \u00e1cino distal.\n\n\n",
+          "bibliography": "BIBLIOGRAF\u00cdA: \r\nKlatt, Edward C., MD; Kumar, Vinay, MBBS, MD, FRCPath. Patolog\u00eda estructural y funcional. 10\u00aa ed. Elsevier Espa\u00f1a, S.L.U.",
+          "is_correct": 0
+      },
+      {
+          "id": "39",
+          "statement": "Femenina de 45 a\u00f1os, con antecedente de Sj\u00f6gren, quien consulta por la aparici\u00f3n de lesiones eritematosas y descamativas en cuero cabelludo. Dice que ha cambiado en m\u00faltiples ocasiones el shampoo pero no mejora. Al examen f\u00edsico se observan m\u00faltiples lesiones bien demarcadas en el cuero cabelludo en regi\u00f3n frontal y retroauricular bilateral, que sobrepasan aproximadamente 2 cm el borde de implantaci\u00f3n del cuero cabelludo hacia el cuello, adicionalmente se encuentran pintas blanquecinas en las u\u00f1as \u00bfCu\u00e1l es el diagn\u00f3stico m\u00e1s probable en esta paciente?",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Dermatitis seborr\u00e9ica. ",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Psoriasis Guttata.",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "C",
+                  "label": "Ti\u00f1a corporis.",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "Psoriasis del cuero cabelludo.",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Dermatolog\u00eda",
+          "type": "Cl\u00ednicas",
+          "justification": "Aqu\u00ed los diagn\u00f3sticos diferenciales ser\u00edan Psoriasis del cuero cabelludo y dermatitis seborr\u00e9ica. Tanto la psoriasis como la dermatitis seborreica suelen afectar el cuero cabelludo, las orejas y las \u00e1reas intertriginosas. La dermatitis seborreica suele presentarse con placas eritematosas con descamaci\u00f3n suprayacente (sin sobrepasar el borde del cuero cabelludo), caracter\u00edstica que apoya el diagn\u00f3stico de psoriasis del cuero cabelludo en este caso. Las caracter\u00edsticas que respaldan el diagn\u00f3stico de dermatitis seborreica incluyen la escama grasa fina, caracter\u00edstica que se manifiesta t\u00edpicamente en localizaciones no intertriginosas y la afectaci\u00f3n de \u00e1reas cl\u00e1sicas como las cejas, los pliegues nasolabiales, el t\u00f3rax central o el \u00e1rea post auricular. En personas de piel oscura, el eritema puede ser menos visible. La presencia de cambios en las u\u00f1as o cambios caracter\u00edsticos de la psoriasis en otras \u00e1reas ayuda a distinguir la psoriasis de la dermatitis seborreica. La psoriasis del cuero cabelludo es una de las manifestaciones de la psoriasis cr\u00f3nica en placas (psoriasis vulgar) y suele presentarse con placas cut\u00e1neas distribuidas sim\u00e9tricamente. En este caso las lesiones sobrepasan el borde del cuero cabelludo. \n",
+          "bibliography": "Bibliograf\u00eda:  \r\nSteven R Feldman, MD, PhD. Psoriasis: Epidemiology, clinical manifestations, and diagnosis. https:\/\/www.uptodate.com\/contents\/psoriasis-epidemiology-clinical-manifestations-and-diagnosis?sectionName=CLINICAL%20MANIFESTATIONS&search=guttate&topicRef=15280&anchor=H9&source=see_link#H9",
+          "is_correct": 0
+      },
+      {
+          "id": "209",
+          "statement": "Gestante de 20 semanas, quien consulta al segundo al control prenatal,  prueba de VIH positiva y confirmada desde el control pasado, con inicio de terapia antirretroviral hace 2 semanas, el control de carga viral en esta paciente debe realizarse: ",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Debe realizarse a los 3 y 6 meses ",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "No es necesario carga viral sino hasta la finalizaci\u00f3n del embaraz",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Debe realizar 2 a 4 semanas despu\u00e9s del inicio de la Terapia",
+                  "value": 1,
+                  "user_answered": 1
+              },
+              {
+                  "id": "D",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Obstetricia",
+          "type": "Cl\u00ednicas",
+          "justification": "En las pacientes que tienen un diagn\u00f3stico reciente de la infecci\u00f3n por VIH y que reci\u00e9n inician TAR, se recomienda tomar la CV al inicio de la gestaci\u00f3n, 2-4 semanas luego de iniciar la TAR, y luego al menos 1 vez cada trimestre, en la semana 36 de gestaci\u00f3n y al nacimiento. \n\n",
+          "bibliography": "Bibliograf\u00eda \r\nXXX curso de actualizaci\u00f3n en ginecolog\u00eda y obstetricia. 2022. Cap\u00edtulo 19: Virus de la inmunodeficiencia humana (VIH) durante la gestaci\u00f3n. Jader G\u00f3mez Gallego.\r",
+          "is_correct": 1
+      },
+      {
+          "id": "227",
+          "statement": "Gestante de 30 semanas, hospitalizada hace 5 d\u00edas por cuadro de infecci\u00f3n urinaria no complicada, sin actividad uterina ni descargas vaginales, con respecto a la tromboprofilaxis posterior al alta, es correcto afirmar: \r\n",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Se extienden medidas antitromb\u00f3ticas no farmacol\u00f3gicas por 28 d\u00edas",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Se debe continuar medidas farmacol\u00f3gicas por lo menos 1 mes posterior al alta",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "No se debe realizar ninguna medida farmacol\u00f3gica o no farmacol\u00f3gica, puesto que el riesgo ya ha sido superado",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "D",
+                  "label": "En la literatura no se especifica como debe realizarse la tromboprofilaxis ",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Obstetricia",
+          "type": "Cl\u00ednicas",
+          "justification": "\n#imagen\n\n\n",
+          "bibliography": "Bibliograf\u00eda: \r\nXXX curso de actualizaci\u00f3n en ginecolog\u00eda y obstetricia. 2022. Cap\u00edtulo 14: Tromboprofilaxis en obstetricia: una necesidad en la pr\u00e1ctica obst\u00e9trica. Jes\u00fas A. Vel\u00e1squez Penagos. \r",
+          "is_correct": 0
+      },
+      {
+          "id": "294",
+          "statement": "Paciente femenina de 29 a\u00f1os, G2, P2, acude a consulta por presentar incontinencia urinaria durante los \u00faltimos 5 meses. La paciente refiere perder peque\u00f1as cantidades de orina cuando levanta a sus hijos y cuando estornuda. Dio a luz a un ni\u00f1o hace 16 meses a trav\u00e9s de un parto vaginal normal, en el cual sufri\u00f3 una laceraci\u00f3n vaginal de segundo grado. No tiene antecedentes m\u00e9dicos de importancia y niega tomar alg\u00fan medicamento. \r\n\u00bfCu\u00e1l de las siguientes no es un estudio recomendado para el diagn\u00f3stico de esta paciente?\r\n",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Examen p\u00e9lvico",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Test del hisopo",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Ecograf\u00eda transvaginal",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "Medici\u00f3n de volumen residual por cateterismo",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "E",
+                  "label": "Medici\u00f3n del volumen residual ",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Ginecolog\u00eda",
+          "type": "Cl\u00ednicas",
+          "justification": "La ecograf\u00eda transvaginal no nos aportar\u00e1 mayor informaci\u00f3n sobre la incontinencia urinaria de la paciente.\nEl primer paso para evaluar la sospecha de incontinencia urinaria es el examen p\u00e9lvico para evaluar la anatom\u00eda. En la incontinencia de esfuerzo genuina, el examen f\u00edsico p\u00e9lvico revela una protrusi\u00f3n de la pared vaginal anterior (Cistocele. En cambio, la incontinencia por aumento o disminuci\u00f3n del tono muscular, la anatom\u00eda es normal.\nLos ejercicios de kegel est\u00e1n dise\u00f1ados para fortalecer los m\u00fasculos pubococc\u00edgeos, que forman parte del piso p\u00e9lvico. Por lo general, es el tratamiento inicial para casos leves y moderados de incontinencia de esfuerzo, pero, como menciono, primero debe realizarse el examen p\u00e9lvico. \n Test del hisopo: Es una forma \u00fatil de identificar la incontinencia de esfuerzo. Se coloca un hisopo lubricado en la uretra de la paciente y se le pide que aumente la presi\u00f3n intraabdominal (toser o valsalva). Si la punta del hisopo se mueve a m\u00e1s de 30 grados, se considera positiva.\nLa medici\u00f3n de volumen residual por cateterismo y la medici\u00f3n del volumen residual por ultrasonido son formas de estudios cistom\u00e9tricos para evaluar incontinencia de esfuerzo, generalmente no se usan como estudio inicial. \n\n",
+          "bibliography": "Bibliograf\u00eda: Banco de Preguntas en espa\u00f1ol para USMLE\/IFOM. (s. f.). Kaplan Test Prep.",
+          "is_correct": 0
+      },
+      {
+          "id": "386",
+          "statement": "Paciente masculino de 71 a\u00f1os, entra a cirug\u00eda para reparaci\u00f3n electiva de un aneurisma a\u00f3rtico abdominal (AAA). Se le ha hecho seguimiento cercano durante 3 a\u00f1os, pero en el \u00faltimo ha crecido 1 cm, hasta medir 5.8 cm. La cirug\u00eda termina sin complicaciones, se extuba al paciente y se pasa a la UCI para manejo postoperatorio. Permanece hemodin\u00e1micamente estable y sus extremidades inferiores tienen buena temperatura y perfusi\u00f3n. En el d\u00eda 1 postoperatorio su creatinina aumenta de 1.1 mg\/dL a 1.3 mg\/dL, pero el gasto urinario se mantiene en aproximadamente 40 mL\/h. En el d\u00eda 2 del postoperatorio, presenta dolor abdominal y un episodio de diarrea sangrienta. La hematolog\u00eda completa de emergencia reporta que la hemoglobina est\u00e1 en 9 g\/dL y el recuento leucocitario subi\u00f3 de 12,000\/mm\u00b3 en la ma\u00f1ana a 15,000\/mm\u00b3. \u00bfCu\u00e1l de las siguientes opciones es el diagn\u00f3stico m\u00e1s adecuado?",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Colitis isqu\u00e9mica",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Disenter\u00eda por Clostridium difficile",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "\u00cdleo postoperatorio",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "Sangrado residual posoperatorio",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Cirug\u00eda general",
+          "type": "Cl\u00ednicas",
+          "justification": "El diagn\u00f3stico es colitis isqu\u00e9mica, una complicaci\u00f3n reconocida de la reparaci\u00f3n de un aneurisma a\u00f3rtico abdominal abierto o endovascular. A menudo el origen de la arteria mesent\u00e9rica inferior se cubre con el injerto a\u00f3rtico y, en pacientes que no tienen una colateralizaci\u00f3n adecuada de la v\u00eda arterial marginal de Drummund, presenta riesgo de isquemia del colon descendente y sigmoideo. El recto no est\u00e1 involucrado porque tiene una irrigaci\u00f3n diferente. La diarrea con sangre y la leucocitosis en el postoperatorio son esencialmente diagn\u00f3sticos de esta condici\u00f3n, pero la regla de oro sigue siendo la visualizaci\u00f3n endosc\u00f3pica de mucosa cian\u00f3tica o friable, ya sea por colonoscopia o sigmoidoscopia flexible. El manejo requiere casi exclusivamente de una resecci\u00f3n col\u00f3nica con colostom\u00eda. La falta de intervenci\u00f3n r\u00e1pida puede resultar en sepsis y muerte. \n\nAunque la diarrea y leucocitosis en aumento son preocupantes en infecciones por Clostridium difficile, la diarrea suele ser acuosa y f\u00e9tida, no sangrienta. Por ahora, por el antecedente de reparaci\u00f3n de AAA es necesario descartar primero una colitis isqu\u00e9mica.\n\n",
+          "bibliography": "Bibliograf\u00eda: Banco de Preguntas en espa\u00f1ol para USMLE\/IFOM. (s. f.). Kaplan Test Prep.",
+          "is_correct": 0
+      },
+      {
+          "id": "403",
+          "statement": "A su servicio de urgencias en horas de la tarde, consulta un paciente de 40 a\u00f1os de edad, tiene antecedente de reflujo gastroesof\u00e1gico, sin otros antecedentes de importancia. Comenta que en la ma\u00f1ana le realizaron una endoscopia digestiva superior, refiere que desde hace aproximadamente 2 horas presenta dolor tor\u00e1cico y dificultad respiratoria, por el momento sin otro s\u00edntoma asociado.  Con los datos anteriores, \u00bfCu\u00e1l ser\u00eda el diagn\u00f3stico m\u00e1s probable en este paciente?",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Infarto agudo de miocardio",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Perforaci\u00f3n esof\u00e1gica",
+                  "value": 1,
+                  "user_answered": 1
+              },
+              {
+                  "id": "C",
+                  "label": "Son sintomas normales posteriores al procedimiento",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "Exacerbaci\u00f3n de los s\u00edntomas por reflujo gastroesof\u00e1gico posterior a procedimiento endosc\u00f3pico",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Cirug\u00eda general",
+          "type": "Cl\u00ednicas",
+          "justification": "El paciente tiene una sintomatolog\u00eda sospechosa de perforaci\u00f3n esof\u00e1gica, los siguientes s\u00edntomas son los m\u00e1s comunes por orden de frecuencia, el dolor (71%), la fiebre (51%), la disnea (24%) y la crepitaci\u00f3n (22%). No es necesario que aparezcan todos a la vez para llegar a un diagn\u00f3stico,  y menos si nos dan un dato clave como es un antecedente de intervencionismo endosc\u00f3pico reciente, que es la causa m\u00e1s frecuente de perforaci\u00f3n esof\u00e1gica.\n\n",
+          "bibliography": "Bibliograf\u00eda: Banco de Preguntas en espa\u00f1ol para USMLE\/IFOM. (s. f.). Kaplan Test Prep.",
+          "is_correct": 1
+      },
+      {
+          "id": "509",
+          "statement": "Paciente de 45 a\u00f1os con colelitiasis y colecistitis aguda por ecograf\u00eda. Al examen f\u00edsico con dolor en hipocondrio derecho. \u00bfCu\u00e1l de las siguientes opciones no es un criterio diagn\u00f3stico para colecistitis aguda seg\u00fan las gu\u00edas Tokio 2018?",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Fiebre",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Signo de Murphy positivo",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Hallazgos ecogr\u00e1ficos",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "D",
+                  "label": "V\u00f3mito asociado a ingesta de alimento",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Cirug\u00eda general",
+          "type": "Cl\u00ednicas",
+          "justification": "Respuesta D\n\n#imagen\n",
+          "bibliography": "Referencia\nDiagnostic criteria and severity grading of acute cholangitis, pag 48, Tokyo Guidelines 2018",
+          "is_correct": 0
+      },
+      {
+          "id": "522",
+          "statement": "Masculino de 57 a\u00f1os con sospecha de enfermedad inflamatoria intestinal. Viene a consulta con informe de colonoscopia total que reporta p\u00e9rdida de la vascularidad de forma difusa por todo el trayecto del colon, lesiones eritematosas en parche en distintos segmentos, mucosa granular, presencia de un pseudop\u00f3lipo en colon derecho y peque\u00f1as \u00falceras en \u00edleon distal. Se tomaron biopsias de las lesiones. Respecto a los hallazgos imaginol\u00f3gicos e histol\u00f3gicos de la enfermedad, \u00bfCu\u00e1l de las siguientes opciones corresponde a enfermedad de Crohn? Seleccione la opci\u00f3n correcta:",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "El  compromiso es ileocecal, es raro",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Es una enfermedad transmural que puede afectar de la boca hasta el ano",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "El compromiso suele ser superficial, delimitado al \u00edleon y el recto",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "D",
+                  "label": "El granuloma caseificante descarta el diagn\u00f3stico",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Cirug\u00eda general",
+          "type": "Cl\u00ednicas",
+          "justification": "La EC puede afectar cualquier segmento del tracto gastrointestinal (GI), desde la boca hasta el ano. Es un compromiso transmural y es la caracter\u00edstica que la diferencia de la colitis ulcerativa que tiene un compromiso m\u00e1s superficial desde el punto de vista histol\u00f3gico. La gravedad y la ubicaci\u00f3n de la enfermedad dictan los signos y s\u00edntomas asociados, lo que lleva a un amplio espectro de presentaciones cl\u00ednicas. El compromiso de la enfermedad es predominantemente ileocecal y el granuloma aparece hasta en un 33% de las muestras tomadas por colonoscopia. \n\n",
+          "bibliography": "BIBLIOGRAF\u00cdA:\r\n- Flynn S, Eisenstein S. Inflammatory Bowel Disease Presentation and Diagnosis. Surgical Clinics of North America. 2019 Dec;99(6):1051\u201362.  \r\n- Rubin DT, Ananthakrishnan AN, Siegel CA, Sauer BG, Long MD. ACG Clinical Guideline: Ulcerative Colitis in Adults. American Journal of Gastroenterology. 2019 Feb 27;114(3):384\u2013413.\r",
+          "is_correct": 0
+      },
+      {
+          "id": "535",
+          "statement": "Femenina de 50 a\u00f1os con s\u00edntomas respiratorios cr\u00f3nicos como tos, disnea de grandes esfuerzos y en ocasiones hemoptisis, trae radiograf\u00eda de t\u00f3rax, donde se evidencia radioopacidad derecha, bien delimitada, redondeada de 4 cm aproximadamente que se acompa\u00f1a de atelectasia. Seg\u00fan lo anterior es correcto afirmar",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Se trata de un n\u00f3dulo pulmonar aislado",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "B",
+                  "label": "Se trata de un cuerpo extra\u00f1o",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Se trata de una masa ",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Cirug\u00eda general",
+          "type": "Cl\u00ednicas",
+          "justification": "Por definici\u00f3n, los n\u00f3dulos pulmonares son opacidades redondeadas, relativamente bien definidas, aisladas, de hasta 3 cm de di\u00e1metro, que se rodean de pulm\u00f3n normal y no se acompa\u00f1an de atelectasia o adenopat\u00edas, por esto no se trata de un n\u00f3dulo pulmonar. Se conoce como masa aquellos n\u00f3dulos que midan m\u00e1s de 3 cm como es el caso del paciente anteriormente mencionado, por lo tanto, es una masa. \n\n",
+          "bibliography": "Bibliograf\u00eda: \r\nEnfoque del paciente con n\u00f3dulo pulmonar. Ana Mar\u00eda Ram\u00edrez G\u00f3mez, Cristian Mauricio Sierra Ram\u00edrez, Daniel Ernesto Mej\u00eda Isaza, Isabella Caicedo Cassanova, Andrea Carolina Cadavid. VI curso de actualizaci\u00f3n en cirug\u00eda. 2022.\r",
+          "is_correct": 0
+      },
+      {
+          "id": "543",
+          "statement": "Femenina de 72 a\u00f1os a quien de forma intraoperatoria encontraron ves\u00edcula con m\u00faltiples p\u00f3lipos, el m\u00e1s peque\u00f1o de 3 cm, por lo que enviaron a patolog\u00eda tejido extra\u00eddo y enviaron PET-CT, seg\u00fan lo anterior es correcto afirmar sobre la conducta:",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "La conducta es adecuada, puesto que el PET-CT es el estudio adecuado de esta patolog\u00eda",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "La conducta es inadecuada",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "C",
+                  "label": "La conducta es adecuada aun que el PET-CT no es el estudio de elecci\u00f3n ",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Cirug\u00eda general",
+          "type": "Cl\u00ednicas",
+          "justification": "La conducta es la adecuada, puesto que aunque la PET -CT no es el estudio en las im\u00e1genes de rutina, puede ayudar a detectar met\u00e1stasis insospechadas, linfadenopatia regional, met\u00e1stasis peritoneal, enfermedad en el lecho vesicular o a\u00fan m\u00e1s importante met\u00e1stasis en los orificios de los trocares y as\u00ed guiar el manejo. \n\n",
+          "bibliography": "Bibliograf\u00eda \r\nC\u00e1ncer de ves\u00edcula biliar como hallazgo incidental durante o despu\u00e9s de colecistectom\u00eda laparosc\u00f3pica \u00bfQu\u00e9 hacer? Katherinne Lopera, Camilo Andr\u00e9s Tarazona, Felipe Mej\u00eda. VI curso de actualizaci\u00f3n de cirug\u00eda. 2022.\r",
+          "is_correct": 0
+      },
+      {
+          "id": "554",
+          "statement": "Femenina de 45 a\u00f1os con diagn\u00f3stico de coledocolitiasis, con respecto a lo anterior, es correcto afirmar:",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "La complicaci\u00f3n m\u00e1s com\u00fan es la colangitis",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "La complicaci\u00f3n m\u00e1s com\u00fan es la pancreatitis cronica",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "C",
+                  "label": "En episodios agudos es com\u00fan la cirrosis biliar secundaria e hipertensi\u00f3n portal",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Cirug\u00eda general",
+          "type": "Cl\u00ednicas",
+          "justification": "Las complicaciones de una coledocolitiasis incluyen colangitis y pancreatitis aguda, En escenarios  cr\u00f3nicos, seg\u00fan extensi\u00f3n y duraci\u00f3n de la obstrucci\u00f3n biliar, la coledocolitiasis puede llevar a cirrosis biliar secundaria e hipertensi\u00f3n portal. \n\n\n",
+          "bibliography": "Bibliograf\u00eda: \nColedocolitiasis, lo aprendido y lo actual. Catalina Pineda Garces, Juliana Lucia Molina Valencia. VI curso de actualizaci\u00f3n en cirug\u00eda. 2022.\n",
+          "is_correct": 0
+      },
+      {
+          "id": "685",
+          "statement": "Lo llaman a evaluar un paciente de 58 a\u00f1os, de sexo masculino, con diagn\u00f3stico de hematoma intracerebral gangliobasal derecho, ya evaluado por Neurocirug\u00eda, quienes consideran que no es de manejo quir\u00fargico. Refiere la enfermera que el paciente ha estado con cifras de presi\u00f3n arterial elevadas, usted revisa al paciente y no tiene deterioro neurol\u00f3gico ni signos de hipertensi\u00f3n intracraneana. Con respecto al manejo hemodin\u00e1mico en pacientes con ACV hemorr\u00e1gico es cierto:\n",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Se recomienda una meta de presi\u00f3n arterial menor a 220 mmHg para evitar complicaciones mayores secundarias a la emergencia hipertensiva.",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Los pacientes con diagn\u00f3stico de hematoma intracerebral deben recibir manejo agresivo de las cifras de presi\u00f3n arterial para evitar resangrados, la meta es mantener presi\u00f3n arterial sist\u00f3lica en 90-100 mmHg.",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "C",
+                  "label": "En el contexto de ACV hemorr\u00e1gico se deben mantener cifras de presi\u00f3n arterial sist\u00f3lica entre 150-160 mmHg, ya que se debe garantizar adecuada presi\u00f3n de perfusi\u00f3n cerebral.",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "La meta de presi\u00f3n arterial es llevar la presi\u00f3n arterial sist\u00f3lica inicialmente a menos de 140 mmHg (rango 130-150 mmHg), ya que cifras de presi\u00f3n arterial sist\u00f3lica mayores que 150 mmHg se asocian a complicaciones.\n",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Neurolog\u00eda y neurocirug\u00eda",
+          "type": "Cl\u00ednicas",
+          "justification": "en el contexto de emergencia hipertensiva, uno de los \u00f3rganos blanco es el cerebro, por ello el manejo de la presi\u00f3n arterial es el pilar del manejo de soporte hemodin\u00e1mico, las \u00faltimas gu\u00edas recomiendan mantener una presi\u00f3n arterial sist\u00f3lica menor a 140 mmHg (con un rango entre 130 y 150 mmHg), la meta es alcanzar esa cifra en las primeras dos horas del inicio de los s\u00edntomas neurol\u00f3gicos, esto mejora los desenlaces neurol\u00f3gicos y evita complicaciones.\n\n",
+          "bibliography": "Referencia: Steven M. Greenberg, et al. 2022 Guideline for the Management of Patients With Spontaneous Intracerebral Hemorrhage: A Guideline From the American Heart Association\/American Stroke Association. Stroke. Volume 53, Issue 7, July 2022; Pages e282-e361.",
+          "is_correct": 0
+      },
+      {
+          "id": "1030",
+          "statement": "Adulto con sospecha diagn\u00f3stica de artritis s\u00e9ptica en quien se realiza artrocentesis, \u00bfcu\u00e1l de los siguientes valores de leucocitos le confirmar\u00e1 el diagn\u00f3stico?\r\n",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "> 20.000\r\n",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "> 100.000",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "> 50.000",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "> 75.000",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Ortopedia",
+          "type": "Cl\u00ednicas",
+          "justification": "Explicaci\u00f3n:\r\nLa artritis inflamatoria puede tener recuentos leucocitarios altos, pero no sobrepasan los 100.000, rango a partir del cual se considera una artritis s\u00e9ptica. \r\n\r",
+          "bibliography": "Bibliograf\u00eda\r\n\r\nInfecciones osteoarticulares, clase de futuros residentes 2020. \r\n",
+          "is_correct": 0
+      },
+      {
+          "id": "1032",
+          "statement": "Paciente de 6 a\u00f1os, con cuadro cl\u00ednico consistente en trauma en codo y antebrazo derecho, al examen f\u00edsico intenso dolor y limitaci\u00f3n para la pronaci\u00f3n con edema importante en tercio medio de antebrazo, estudios imagenol\u00f3gicos que muestran una fractura en tercio proximal de olecranon con subluxaci\u00f3n anterior de cabeza radial, no otras lesiones.\r\n\u00bfCu\u00e1l es el diagn\u00f3stico y la conducta m\u00e1s adecuada en este caso?\r\n",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Luxofractura de Galleazi, reducci\u00f3n cerrada e inmovilizaci\u00f3n con f\u00e9rula en posici\u00f3n neutra\r\n",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Luxofractura de Monteggia, reducci\u00f3n cerrada e inmovilizaci\u00f3n con f\u00e9rula en posici\u00f3n neutra\r\n",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Luxofractura de Galleazi, reducci\u00f3n abierta y fijaci\u00f3n interna",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "D",
+                  "label": "Luxofractura de Monteggia, reducci\u00f3n cerrada e inmovilizaci\u00f3n con f\u00e9rula en   supinaci\u00f3n",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Ortopedia",
+          "type": "Cl\u00ednicas",
+          "justification": "Explicaci\u00f3n:\r\nLuxofractura de Monteggia: Inmovilizar en supinaci\u00f3n. Mnemotecnia: Fractura de ulna luxaci\u00f3n de la cabeza del radio, el radio est\u00e1 montado de Monteggia\r\n",
+          "bibliography": "Bibliograf\u00eda:\r\nFracturas de miembro superior clase de ortopedia futuros residentes 2020\r\n",
+          "is_correct": 0
+      },
+      {
+          "id": "1105",
+          "statement": "Paciente que recibi\u00f3 trauma ocular, con linterna, se evidencia Hifema del 100%, visi\u00f3n a cuenta dedos y aumento del tono ocular \u00bfCu\u00e1l ser\u00eda la conducta m\u00e1s adecuada?",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Terapia t\u00f3pica",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Remisi\u00f3n a oftalmolog\u00eda",
+                  "value": 1,
+                  "user_answered": 1
+              },
+              {
+                  "id": "C",
+                  "label": "Lavar con soluci\u00f3n salina\r\n",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Oftalmolog\u00eda",
+          "type": "Cl\u00ednicas",
+          "justification": "Explicaci\u00f3n:\r\n\r\nRemisi\u00f3n a oftalmolog\u00eda, ya que el paciente presenta HIFEMA del 100% Y SIGNOS DE GRAVEDAD como disminuci\u00f3n de la agudeza visual y aumento del tono ocular para que la especialidad defina intervenci\u00f3n quir\u00fargica. Se aclara que Hifema menores del 100% solo requieren reposo y vigilancia.\r",
+          "bibliography": "Bibliograf\u00eda:\r\n\r\nUrgencias oftalmol\u00f3gicas clase de Futuros Residentes 2020\r\n",
+          "is_correct": 1
+      },
+      {
+          "id": "1141",
+          "statement": "\u00bfQu\u00e9 fracturas metacarpianas no requieren cirug\u00eda?",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Fracturas del cuello con angulaci\u00f3n de 10 \u00b0",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Fracturas de la cabeza del metacarpiano",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Fracturas desplazadas diafisarias que no reducen con maniobras cerradas",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "Fracturas intraarticulares desplazadas con compromiso del 15 % de la superficie articular",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Cirug\u00eda pl\u00e1stica",
+          "type": "Cl\u00ednicas",
+          "justification": "Explicaci\u00f3n:\r\nAngulaci\u00f3n aceptable en di\u00e1fisis del metacarpiano: segundo y tercero 20 grados, 4to \u2192 30 grados, Quinto \u2192 40 \u00b0.   Acortamiento aceptable de 2 a 5 mm.   Angulaci\u00f3n aceptable del cuello de metacarpianos: segundo y tercero: 10 a 15 grados, cuarto metacarpiano 30 a 40 grados, quinto metacarpiano 50 a 60 \u00b0.   No se tolera deformidad rotacional.\r",
+          "bibliography": "Bibliograf\u00eda:\r\nCurso de Futuros residentes sesi\u00f3n de cirug\u00eda pl\u00e1stica 2020\r\nLibro de cirug\u00eda pl\u00e1stica CIB \r",
+          "is_correct": 0
+      },
+      {
+          "id": "1183",
+          "statement": "En pacientes con falla cardiaca congestiva, con respecto a su tratamiento diur\u00e9tico, es falso afirmar: ",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "La dosis inicial administrada debe ser el equivalente a la misma dosis oral que reciben en casa en 24 horas",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Debe ser administrada en bolo",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "C",
+                  "label": "La administraci\u00f3n en bolo es superior a la infusi\u00f3n continua ",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Medicina interna",
+          "type": "Cl\u00ednicas",
+          "justification": "Explicaci\u00f3n: \r\nLa dosis inicial administrada en pacientes con falla cardiaca congestiva debe ser equivalente a la misma dosis oral que recib\u00edan los pacientes en casa para 2 horas, debe ser administrada en bolo y se debe monitorizar la diuresis cada hora durante las siguientes 6 horas. La administraci\u00f3n en bolo o en infusi\u00f3n continua han demostrado igual efectividad\r",
+          "bibliography": "Bibliograf\u00eda: \r\nXXI curso de actualizaci\u00f3n en Medicina Interna. 2022. Cap\u00edtulo 2: Escenarios cl\u00ednicos en insuficiencia cardiaca aguda. Clara In\u00e9s Saldarriaga Giraldo\r\n",
+          "is_correct": 0
+      },
+      {
+          "id": "820",
+          "statement": "Un paciente de 55 a\u00f1os presenta ictericia, dolor abdominal y fiebre. Los estudios de laboratorio muestran una elevaci\u00f3n de la bilirrubina y de las transaminasas. La ecograf\u00eda abdominal revela la presencia de c\u00e1lculos biliares. \u00bfQu\u00e9 patolog\u00eda hepatobiliar podr\u00eda presentar?",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Colestasis",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Hepatitis alcoh\u00f3lica",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Colangitis esclerosante primaria",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "D",
+                  "label": "Colecistitis aguda",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Gen\u00e9tica",
+          "type": "B\u00e1sicas",
+          "justification": "La colelitiasis o presencia de c\u00e1lculos biliares es una de las principales causas de colecistitis aguda, que se caracteriza por dolor abdominal, fiebre e ictericia. Los niveles de bilirrubina y transaminasas tambi\u00e9n pueden estar elevados. En este caso cl\u00ednico, la ecograf\u00eda abdominal revela la presencia de c\u00e1lculos biliares, lo que sugiere que se trata de una colecistitis aguda",
+          "bibliography": "Tazuma S. Gallstone disease: Epidemiology, pathogenesis, and classification of biliary stones (common bile duct and intrahepatic). Best Pract Res Clin Gastroenterol. 2006;20(6):1075-83.\r\nTargarona EM, Balagu\u00e9 C, Cerd\u00e1n G, et al. Colecistitis aguda. Gu\u00eda cl\u00ednica de la Asociaci\u00f3n Espa\u00f1ola de Cirujanos. 2014. Disponible en: https:\/\/www.aecirujanos.es\/files\/guias-clinicas\/colecistitis-aguda\/colecistitis-aguda-aec.pdf\r\n",
+          "is_correct": 0
+      },
+      {
+          "id": "836",
+          "statement": "En un experimento se estudian los factores que controlan la cicatrizaci\u00f3n de las heridas. Se observan \u00falceras cut\u00e1neas y se analizan los factores implicados en el proceso de cicatrizaci\u00f3n. \u00bfCu\u00e1l de los siguientes factores es m\u00e1s probable que resulte eficaz para promover la angiogenia?\r\n",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Factor de crecimiento de fibroblastos b\u00e1sico",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Endostatina",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "C",
+                  "label": "Factor de crecimiento epid\u00e9rmico",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "Interleucina 1",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Biolog\u00eda molecular",
+          "type": "B\u00e1sicas",
+          "justification": "El factor de crecimiento de fibroblastos b\u00e1sico es un potente inductor de la angiogenia. Puede participar en todos los pasos de este proceso. La endostatina es un inhibidor de la angiogenia. El factor de crecimiento epid\u00e9rmico y la interleucina 1 carecen de actividad angi\u00f3gena significativa. El factor de crecimiento derivado de plaquetas est\u00e1 implicado en el remodelado vascular.\r",
+          "bibliography": "Huppert\u2019s Notes: Pathophysiology and Clinical Pearls for Internal Medicine Eds. Laura A. Huppert, and Timothy G. Dyster. McGraw Hill, 2021.",
+          "is_correct": 0
+      },
+      {
+          "id": "845",
+          "statement": "Algunas variedades de filamentos intermedios del citoesqueleto est\u00e1n formados por las prote\u00ednas:",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Tubulina alfa y beta",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Vilina y filamina",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Fibronectina y fibrilina",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "D",
+                  "label": "Queratina y vimentina",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Biolog\u00eda molecular",
+          "type": "B\u00e1sicas",
+          "justification": " Los filamentos intermedios son prote\u00ednas con un grosor de 10 nm aproximadamente. Son ejemplos de este tipo de filamentos la queratina y la vimentina.\r",
+          "bibliography": "BIBLIOGRAF\u00cdA: \nHuppert\u2019s Notes: Pathophysiology and Clinical Pearls for Internal Medicine Eds. Laura A. Huppert, and Timothy G. Dyster. McGraw Hill, 2021.\n\n",
+          "is_correct": 0
+      },
+      {
+          "id": "859",
+          "statement": "El s\u00edndrome de Kartagener se genera por la falta de una prote\u00edna importante en la composici\u00f3n de los cilios, esta prote\u00edna ausente corresponde a:",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Tubulina",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Brazos de dine\u00edna",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Profilina ",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "D",
+                  "label": "Nexina",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Gen\u00e9tica",
+          "type": "B\u00e1sicas",
+          "justification": "Explicaci\u00f3n: \r\nEl s\u00edndrome de Kartagener es una de las alteraciones clasificadas como discinesia ciliar primaria, en este hay un fracaso del sistema de transporte mucociliar y ocurre por ausencia de brazos de dine\u00edna. \r\n",
+          "bibliography": "Bibliograf\u00eda: \r\nHistolog\u00eda, texto y atlas color con biolog\u00eda celular y molecular 2007. Edici\u00f3n Panamericana. Cap\u00edtulo 5: Tejido epitelial.  Michael H. Ross, Wojciech Pawlina. \r\n",
+          "is_correct": 0
+      },
+      {
+          "id": "864",
+          "statement": "Femenina de 26 a\u00f1os tiene antecedentes de epistaxis frecuentes y mayor flujo sangu\u00edneo menstrual. En la exploraci\u00f3n f\u00edsica, la piel de las extremidades presenta petequias y p\u00farpura. Los paracl\u00ednicos muestran resultados normales del tiempo de tromboplastina parcial (TTP), tiempo de protrombina (TP) y del recuento de plaquetas, pero la actividad del factor de von Willebrand est\u00e1 reducida. \u00bfCu\u00e1l de los siguientes pasos de la hemostasia es m\u00e1s probable que tenga alterado esta paciente?",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Polimerizaci\u00f3n de la fibrin",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Adhesi\u00f3n plaquetaria",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Agregaci\u00f3n plaquetaria",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "D",
+                  "label": "Generaci\u00f3n de protrombina",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Fisiolog\u00eda",
+          "type": "B\u00e1sicas",
+          "justification": "RESPUESTA:\r\nEl factor de von Willebrand (vWF) funciona como \u00abpegamento\u00bb entre las plaquetas y la matriz extracelular expuesta de la pared del vaso tras una lesi\u00f3n vascular. Ninguno de los dem\u00e1s pasos rese\u00f1ados depende del vWF. Como el tiempo de protrombina (TP) de la paciente es normal, no es probable la carencia de protrombina ni la presencia de un inhibidor. Puesto que el vWF estabiliza el factor VIII, un d\u00e9ficit de vWF podr\u00eda prolongar el tiempo de tromboplastina parcial (TTP).\r\n",
+          "bibliography": "BIBLIOGRAF\u00cdA: \nGeneral Physiology. In: kibble JD. eds. The Big Picture Physiology: Medical Course & Step 1 Review, 2e. McGraw Hill\n\n",
+          "is_correct": 0
+      },
+      {
+          "id": "869",
+          "statement": "\u00bfCu\u00e1l de estos factores hormonales no estimula la espermatogenia?\r\n",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Testosterona",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "LH",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "FSH",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "D",
+                  "label": "Progesterona",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Fisiolog\u00eda",
+          "type": "B\u00e1sicas",
+          "justification": "La producci\u00f3n de espermatozoides (espermatog\u00e9nesis) est\u00e1 regulada hormonalmente. La GnRH sintetizada en el hipot\u00e1lamo act\u00faa sobre la hip\u00f3fisis y \u00e9sta, mediante la FSH y la LH, regula la espermatog\u00e9nesis.\r\nLa FSH act\u00faa sobre las c\u00e9lulas de Sertoli, situadas en los t\u00fabulos semin\u00edferos e implicadas en la formaci\u00f3n de nuevos espermatozoides porque nutren y protegen a las c\u00e9lulas progenitoras de \u00e9stas.\r\nLa acci\u00f3n de la LH tiene lugar sobre las c\u00e9lulas de Leydig y hace que \u00e9stas produzcan testosterona, la cual tambi\u00e9n ser\u00e1 importante en la regulaci\u00f3n de la espermatog\u00e9nesis.\r",
+          "bibliography": "Referencia\nGUYTON, Arthur; HALL, Jhon; TRATADO DE FISIOLOGIA MEDICA. 11a edici\u00f3n 2.006. Elsevier Espa\u00f1a.\n",
+          "is_correct": 0
+      },
+      {
+          "id": "896",
+          "statement": " Una de las siguientes no hace de la cl\u00ednica de una lesi\u00f3n de neurona motora INFERIOR: \r\n",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Par\u00e1lisis fl\u00e1cida",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Fasciculaciones musculares",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Signo de Babinski",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "Atrofia de los m\u00fasculos",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Neuroanatom\u00eda",
+          "type": "B\u00e1sicas",
+          "justification": "Explicaciones: \r\nEl s\u00edndrome de motoneurona inferior se observa par\u00e1lisis fl\u00e1cida, atrofia, p\u00e9rdida de reflejos, fasciculaciones musculares, contractura muscular y reacci\u00f3n de degeneraci\u00f3n. El signo de Babinski es caracter\u00edstico de lesi\u00f3n en motoneurona superior. \r\n",
+          "bibliography": "Bibliograf\u00eda: \r\nNeuroanatom\u00eda Cl\u00ednica .6 edici\u00f3n. Cap\u00edtulo 4: La m\u00e9dula espinal y los tractos ascendentes y descendentes. Snell.\r\n",
+          "is_correct": 0
+      },
+      {
+          "id": "902",
+          "statement": "Los endotelios corresponden a epitelio de clasificaci\u00f3n:",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Simple plano",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Estratificado plano",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Cil\u00edndrico bajo",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "D",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Histolog\u00eda",
+          "type": "B\u00e1sicas",
+          "justification": "Explicaci\u00f3n: \r\nEl endotelio es el encargado del revestimiento epitelial del aparato cardiovascular, e histol\u00f3gicamente se clasifica como un epitelio simple plano, al igual que el mesotelio. \r",
+          "bibliography": "Bibliograf\u00eda: \r\nHistolog\u00eda, texto y atlas color con biolog\u00eda celular y molecular 2007. Edici\u00f3n Panamericana. Cap\u00edtulo 5: Tejido epitelial.  Michael H. Ross, Wojciech Pawlina.\r",
+          "is_correct": 0
+      },
+      {
+          "id": "910",
+          "statement": "Femenina de 29 a\u00f1os en su primer trimestre de embarazo presenta preeclampsia y p\u00e9rdidas vaginales de sangre. La exploraci\u00f3n ecogr\u00e1fica muestra un \u00fatero aumentado de tama\u00f1o y vellosidades cori\u00f3nicas. Los an\u00e1lisis de laboratorio muestran una elevaci\u00f3n de la concentraci\u00f3n de BhCG. El m\u00e9dico sospecha una mola hidatiforme, trastorno que se caracteriza por edema significativo de las vellosidades cori\u00f3nicas rodeadas por c\u00e9lulas trofobl\u00e1sticas. \u00bfA qu\u00e9 dos capas celulares da origen normalmente la c\u00e9lula trofobl\u00e1stica?\r\n",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Ectodermo y endodermo",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Sincitiotrofoblasto y citotrofoblasto",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Endodermo y mesodermo",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "D",
+                  "label": "Hipoblasto y epiblasto",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Embriolog\u00eda",
+          "type": "B\u00e1sicas",
+          "justification": "RESPUESTA: \r\nSincitiotrofoblasto y citotrofoblasto. Despu\u00e9s de la invasi\u00f3n trofobl\u00e1stica del endometrio, las c\u00e9lulas trofobl\u00e1sticas producen dos capas celulares: el sincitiotrofoblasto es la capa m\u00e1s externa, que se relaciona con la pared endometrial, mientras que el citotrofoblasto es la capa m\u00e1s interna, que suele dar lugar a las vellosidades cori\u00f3nicas. El ectodermo, el endodermo y el mesodermo son capas germinales del cuerpo que se producen durante la gastrulaci\u00f3n. Las c\u00e9lulas del hipoblasto y del epiblasto derivan de la masa celular interna del blastocisto. El epiblasto acabar\u00e1 por formar, mediante gastrulaci\u00f3n, las capas germinales. Las c\u00e9lulas de la cresta neural no dan origen al sincitiotrofoblasto y al citotrofoblasto; el tubo neural forma el sistema nervioso central.\r",
+          "bibliography": "BIBLIOGRAF\u00cdA: \r\nGreene KG, Trembath DG. Pathology In: Reisner HM. eds. Pathology: A Modern Case Study, 2e. McGraw Hill; 2020.\r\n",
+          "is_correct": 0
+      },
+      {
+          "id": "911",
+          "statement": "Gestante de 32 a\u00f1os con 30 semanas acude a la consulta de su obstetra por primera vez. La ecograf\u00eda muestra un embarazo gemelar y se observa que uno de los gemelos est\u00e1 rodeado por exceso de l\u00edquido amni\u00f3tico, y el otro con poco l\u00edquido. Se diagnostica un s\u00edndrome de transfusi\u00f3n feto-fetal. \u00bfCu\u00e1l de los siguientes tipos de embarazo es la causa m\u00e1s probable de este trastorno?\r\n",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Gemelos monocori\u00f3nicos diamni\u00f3ticos",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Gemelos dicori\u00f3nicos diamni\u00f3ticos",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Gemelos monocori\u00f3nicos monoamni\u00f3ticos",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "D",
+                  "label": "Gemelos dicori\u00f3nicos monoamni\u00f3ticos",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Embriolog\u00eda",
+          "type": "B\u00e1sicas",
+          "justification": "En los gemelos monocori\u00f3nicos diamni\u00f3ticos, la placenta \u00fanica (debido a factores a\u00fan desconocidos) desarrolla conexiones de vasos sangu\u00edneos entre los vasos umbilicales de los gemelos. Estas conexiones provocan un desequilibrio de la irrigaci\u00f3n sangu\u00ednea denominado s\u00edndrome de transfusi\u00f3n feto-fetal (STFF). En el STFF, el gemelo donante no recibe suficiente sangre y el gemelo receptor desarrolla una sobrecarga de volumen. Con el fin de reducir su volumen sangu\u00edneo, el gemelo receptor aumenta la producci\u00f3n de orina, lo que al final provoca polihidramnios. Al mismo tiempo, el gemelo donante produce menos cantidad de orina de lo normal, lo que provoca oligohidramnios. A medida que la enfermedad avanza, el donante produce tan poca orina que su vejiga urinaria puede no verse en la ecograf\u00eda. El gemelo queda envuelto por su membrana amni\u00f3tica, lo que se denomina gemelo \u00abpegado\u00bb. A menudo, el polihidramnios del gemelo receptor es lo primero que nota la paciente debido a un aumento repentino del tama\u00f1o del \u00fatero. Esta anomal\u00eda s\u00f3lo es posible cuando los gemelos comparten un corion \u00fanico, pero con dos sacos amni\u00f3ticos separados.\r",
+          "bibliography": "BIBLIOGRAF\u00cdA: \r\nDiseases & Pathophysiology in General Medicine. In: Huppert LA, Dyster TG. eds. Huppert\u2019s Notes: Pathophysiology and Clinical Pearls for Internal Medicine. McGraw Hill; 2021.\r\n\r\n",
+          "is_correct": 0
+      },
+      {
+          "id": "914",
+          "statement": "Embriol\u00f3gicamente la f\u00edstula branquial se debe a:\r\n",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Persistencia del segundo arco branquial",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Persistencia del segundo surco y seno cervical",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Persistencia del seno cervical",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "Persistencia del segundo surco y segunda bolsa far\u00edngea",
+                  "value": 1,
+                  "user_answered": 1
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Embriolog\u00eda",
+          "type": "B\u00e1sicas",
+          "justification": "Explicaci\u00f3n: La f\u00edstula branquial es  un canal anormal cuyo extremo interno se abre en el seno  amigdalino y su extremo externo en  la parte  lateral del cuello.\r\nSe debe a la persistencia de partes del segundo  surco far\u00edngeo y de la segunda  bolsa far\u00edngea  \r\nLa f\u00edstula asciende por el tejido  subcut\u00e1neo y el m\u00fasculo cut\u00e1neo del cuello  desde su\r\nabertura en el cuello hasta la vaina carot\u00eddea. A continuaci\u00f3n  pasa entre las arterias  car\u00f3tidas  interna y externa  hasta su abertura en el seno  amigdalino.\r\n",
+          "bibliography": "Referencia: Moore, K y Persaud T. Embriolog\u00eda Cl\u00ednica. Octava Edici\u00f3n, MC Graw \u2013 Hill, Elsevier Espa\u00f1a, S.L. 2.008. pag 171. ",
+          "is_correct": 1
+      },
+      {
+          "id": "917",
+          "statement": " La trisom\u00eda del 18 constituye los siguientes excepto: ",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Retraso mental",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Dedos flexionados ",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Orejas de implantaci\u00f3n baja",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "Malformaciones genitales ",
+                  "value": 1,
+                  "user_answered": 1
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Embriolog\u00eda",
+          "type": "B\u00e1sicas",
+          "justification": "Explicaci\u00f3n: \r\nLos pacientes con trisom\u00eda del 18 tienen las siguientes caracter\u00edsticas, retraso mental, defectos cong\u00e9nitos del coraz\u00f3n, orejas de implantaci\u00f3n baja, flexi\u00f3n de los dedos y de las manos. Se presenta con frecuencia micrognatia, anomal\u00edas renales, sindactilia y malformaciones del sistema esquel\u00e9tico.\r",
+          "bibliography": "Bibliograf\u00eda: \r\nEmbriolog\u00eda m\u00e9dica.13 edici\u00f3n. Cap\u00edtulo 2: gametog\u00e9nesis: transformaci\u00f3n de las c\u00e9lulas germinales en gametos masculinos y femeninos. Lagman.\r\n",
+          "is_correct": 1
+      },
+      {
+          "id": "919",
+          "statement": "Se presenta a un ni\u00f1o de 6 meses de edad con febr\u00edcula, rinitis y estornudos, as\u00ed como tos forzada que termina con una inspiraci\u00f3n intensa (tos ferina). Se cultiva Bordetella pertussis a partir de la nasofaringe. La toxina de este microorganismo impide el funcionamiento normal de la prote\u00edna G\u03b1i en las c\u00e9lulas de las v\u00edas respiratorias. \u00bfCu\u00e1l de las alteraciones siguientes de la se\u00f1alizaci\u00f3n celular inducir\u00e1 la respuesta de las v\u00edas respiratorias a esta infecci\u00f3n?",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "La incapacidad del calcio para unirse a la calmodulina",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "La liberaci\u00f3n an\u00f3mala de calcio estimulada por IP3 a partir del ret\u00edculo endopl\u00e1smico",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "La sobreproducci\u00f3n de AMPc mediada por la ciclasa de adenilato desinhibida",
+                  "value": 1,
+                  "user_answered": 1
+              },
+              {
+                  "id": "D",
+                  "label": "El incremento de la estimulaci\u00f3n de la actividad de la PKC",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Inmunolog\u00eda",
+          "type": "B\u00e1sicas",
+          "justification": "La sobreproducci\u00f3n de AMPc mediada por la ciclasa de adenilato desinhibida. La sobreproducci\u00f3n de AMPc por la falta de inhibici\u00f3n de la adenilato ciclasa se observa cuando la Gi es inhibida por la toxina pertussis. Por lo regular la Gi inhibe a la ciclasa de adenilato. El calcio se libera en respuesta a la activaci\u00f3n de la fosfolipasa C. La PKC tambi\u00e9n se activa como consecuencia de la activaci\u00f3n de la fosfolipasa C.\r\n",
+          "bibliography": "BIBLIOGRAF\u00cdA: \r\nPamela C. Champe, PhD. Lippincott\u2019s Illustrated Reviews. Cell and Molecular Biology, 3\u00aa ed. 2019, Wolters Kluwer",
+          "is_correct": 1
+      },
+      {
+          "id": "938",
+          "statement": "Masculino de 7 a\u00f1os es picado por un insecto. Posterior al evento, desarrolla dificultad respiratoria y vomito persistente. Es llevado de inmediato al servicio de urgencias donde se sospecha anafilaxia y se aplica dosis IM de adrenalina. \u00bfQu\u00e9 acci\u00f3n dar\u00eda lugar a broncodilataci\u00f3n en este paciente?",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Aumento de los niveles de AMPc",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Aumento de los niveles de guanosina monofosfato c\u00edclico (GMPc)\r\n",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Aumento de los niveles de IP3",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "D",
+                  "label": "Secuestro de calcio",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Farmacolog\u00eda",
+          "type": "B\u00e1sicas",
+          "justification": "RESPUESTA: \r\nAumento de los niveles de AMPc. El tratamiento de elecci\u00f3n para las reacciones de hipersensibilidad graves (anafilaxia) es la adrenalina. Este f\u00e1rmaco produce broncodilataci\u00f3n al activar los receptores \u03b2 2 -adren\u00e9rgicos del m\u00fasculo liso bronquial, dando lugar a un aumento de los niveles de AMPc y a la relajaci\u00f3n del m\u00fasculo liso bronquial. El GMPc (B) tambi\u00e9n favorece la relajaci\u00f3n del m\u00fasculo liso, aunque su concentraci\u00f3n no aumenta a consecuencia de la activaci\u00f3n de los receptores \u03b2 2 -adren\u00e9rgicos. El aumento de los niveles de IP 3 (C) y la entrada de calcio (D) provocan la contracci\u00f3n del m\u00fasculo liso. El secuestro de calcio (E) podr\u00eda producir relajaci\u00f3n muscular, aunque no es un efecto de la activaci\u00f3n de los receptores adren\u00e9rgicos.\r",
+          "bibliography": "BIBLIOGRAF\u00cdA: \r\nDiseases & Pathophysiology in General Medicine. In: Huppert LA, Dyster TG. eds. Huppert\u2019s Notes: Pathophysiology and Clinical Pearls for Internal Medicine. McGraw Hill; 2021.\r\n",
+          "is_correct": 0
+      },
+      {
+          "id": "1005",
+          "statement": "Una mujer de 25 a\u00f1os presenta secreci\u00f3n vaginal anormal, prurito y enrojecimiento en la regi\u00f3n genital. Durante el examen, se observa un flujo vaginal blanco-gris\u00e1ceo y un olor desagradable. Se sospecha una infecci\u00f3n bacteriana, cu\u00e1l bacteria podr\u00eda ser la responsable de los s\u00edntomas: ",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Gardnerella vaginalis",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Neisseria gonorrhoeae",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Chlamydia trachomatis",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "Treponema pallidum",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Microbiolog\u00eda",
+          "type": "B\u00e1sicas",
+          "justification": "Los s\u00edntomas descritos en el caso cl\u00ednico, como secreci\u00f3n vaginal anormal, prurito, enrojecimiento, flujo vaginal blanco-gris\u00e1ceo y olor desagradable, son consistentes con una vaginosis bacteriana, que es causada por la bacteria Gardnerella vaginalis.",
+          "bibliography": "Bibliograf\u00eda:\r\n1.\tSobel, J. D. (2019). Vulvovaginal candidosis and bacterial vaginosis. In Clinical obstetrics and gynecology (Vol. 62, No. 3, pp. 503-512). Lippincott Williams and Wilkins.\r\n2.\tWorkowski, K. A., & Bolan, G. A. (2015). Sexually transmitted diseases treatment guidelines, 2015. MMWR. Recommendations and reports: Morbidity and mortality weekly report. Recommendations and reports, 64(RR-03), 1-137\r",
+          "is_correct": 0
+      },
+      {
+          "id": "1008",
+          "statement": "Un hombre de 30 a\u00f1os presenta una infecci\u00f3n de la piel caracterizada por eritema, inflamaci\u00f3n y presencia de pus. Durante el examen, se identifican colonias de bacterias en las lesiones cut\u00e1neas. El mecanismo de patogenicidad bacteriana m\u00e1s probable ser\u00eda: ",
+          "options": [
+              {
+                  "id": "A",
+                  "label": "Producci\u00f3n de toxinas",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "B",
+                  "label": "Formaci\u00f3n de biofilms",
+                  "value": 0,
+                  "user_answered": 0
+              },
+              {
+                  "id": "C",
+                  "label": "Liberaci\u00f3n de enzimas proteol\u00edticas",
+                  "value": 1,
+                  "user_answered": 0
+              },
+              {
+                  "id": "D",
+                  "label": "Resistencia a los antibi\u00f3ticos",
+                  "value": 0,
+                  "user_answered": 1
+              },
+              {
+                  "id": "E",
+                  "label": "",
+                  "value": 0,
+                  "user_answered": 0
+              }
+          ],
+          "specialty": "Microbiolog\u00eda",
+          "type": "B\u00e1sicas",
+          "justification": "Justificaci\u00f3n de la respuesta: Las infecciones cut\u00e1neas pueden ser causadas por varios agentes pat\u00f3genos bacterianos. Uno de los mecanismos de patogenicidad importantes en las infecciones cut\u00e1neas es la liberaci\u00f3n de enzimas proteol\u00edticas por parte de las bacterias. Estas enzimas pueden degradar los tejidos y promover la inflamaci\u00f3n local, lo que se manifiesta en los s\u00edntomas observados en el caso cl\u00ednico, como eritema, inflamaci\u00f3n y presencia de pus",
+          "bibliography": "Bibliograf\u00eda:\r\n1.\tNakatsuji, T., & Gallo, R. L. (2012). The role of the skin microbiome in atopic dermatitis. In Immunity (Vol. 37, No. 5, pp. 769-773). Cell Press. 2\r",
+          "is_correct": 0
+      }
+  ]
 }

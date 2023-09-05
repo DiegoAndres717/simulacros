@@ -1,100 +1,522 @@
 [
-  {
-    "id": 1,
-    "statement": "question1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti nesciunt, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt! iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt!",
-    "statement_image": null,
-    "options": {
-      "A":"iusto libero quidem tenetur cum repellendus 1",
-      "B":"iusto libero quidem tenetur cum repellendus 1",
-      "C":"iusto libero quidem tenetur cum repellendus 1",
-      "D":"iusto libero quidem tenetur cum repellendus 1"
+    {
+        "id": "820",
+        "statement": "Un paciente de 55 a\u00f1os presenta ictericia, dolor abdominal y fiebre. Los estudios de laboratorio muestran una elevaci\u00f3n de la bilirrubina y de las transaminasas. La ecograf\u00eda abdominal revela la presencia de c\u00e1lculos biliares. \u00bfQu\u00e9 patolog\u00eda hepatobiliar podr\u00eda presentar?",
+        "options": [
+            {
+                "id": "A",
+                "label": "Colestasis"
+            },
+            {
+                "id": "B",
+                "label": "Hepatitis alcoh\u00f3lica"
+            },
+            {
+                "id": "C",
+                "label": "Colangitis esclerosante primaria"
+            },
+            {
+                "id": "D",
+                "label": "Colecistitis aguda"
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "919",
+        "statement": "Se presenta a un ni\u00f1o de 6 meses de edad con febr\u00edcula, rinitis y estornudos, as\u00ed como tos forzada que termina con una inspiraci\u00f3n intensa (tos ferina). Se cultiva Bordetella pertussis a partir de la nasofaringe. La toxina de este microorganismo impide el funcionamiento normal de la prote\u00edna G\u03b1i en las c\u00e9lulas de las v\u00edas respiratorias. \u00bfCu\u00e1l de las alteraciones siguientes de la se\u00f1alizaci\u00f3n celular inducir\u00e1 la respuesta de las v\u00edas respiratorias a esta infecci\u00f3n?",
+        "options": [
+            {
+                "id": "A",
+                "label": "La incapacidad del calcio para unirse a la calmodulina"
+            },
+            {
+                "id": "B",
+                "label": "La liberaci\u00f3n an\u00f3mala de calcio estimulada por IP3 a partir del ret\u00edculo endopl\u00e1smico"
+            },
+            {
+                "id": "C",
+                "label": "La sobreproducci\u00f3n de AMPc mediada por la ciclasa de adenilato desinhibida"
+            },
+            {
+                "id": "D",
+                "label": "El incremento de la estimulaci\u00f3n de la actividad de la PKC"
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "910",
+        "statement": "Femenina de 29 a\u00f1os en su primer trimestre de embarazo presenta preeclampsia y p\u00e9rdidas vaginales de sangre. La exploraci\u00f3n ecogr\u00e1fica muestra un \u00fatero aumentado de tama\u00f1o y vellosidades cori\u00f3nicas. Los an\u00e1lisis de laboratorio muestran una elevaci\u00f3n de la concentraci\u00f3n de BhCG. El m\u00e9dico sospecha una mola hidatiforme, trastorno que se caracteriza por edema significativo de las vellosidades cori\u00f3nicas rodeadas por c\u00e9lulas trofobl\u00e1sticas. \u00bfA qu\u00e9 dos capas celulares da origen normalmente la c\u00e9lula trofobl\u00e1stica?\r\n",
+        "options": [
+            {
+                "id": "A",
+                "label": "Ectodermo y endodermo"
+            },
+            {
+                "id": "B",
+                "label": "Sincitiotrofoblasto y citotrofoblasto"
+            },
+            {
+                "id": "C",
+                "label": "Endodermo y mesodermo"
+            },
+            {
+                "id": "D",
+                "label": "Hipoblasto y epiblasto"
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "911",
+        "statement": "Gestante de 32 a\u00f1os con 30 semanas acude a la consulta de su obstetra por primera vez. La ecograf\u00eda muestra un embarazo gemelar y se observa que uno de los gemelos est\u00e1 rodeado por exceso de l\u00edquido amni\u00f3tico, y el otro con poco l\u00edquido. Se diagnostica un s\u00edndrome de transfusi\u00f3n feto-fetal. \u00bfCu\u00e1l de los siguientes tipos de embarazo es la causa m\u00e1s probable de este trastorno?\r\n",
+        "options": [
+            {
+                "id": "A",
+                "label": "Gemelos monocori\u00f3nicos diamni\u00f3ticos"
+            },
+            {
+                "id": "B",
+                "label": "Gemelos dicori\u00f3nicos diamni\u00f3ticos"
+            },
+            {
+                "id": "C",
+                "label": "Gemelos monocori\u00f3nicos monoamni\u00f3ticos"
+            },
+            {
+                "id": "D",
+                "label": "Gemelos dicori\u00f3nicos monoamni\u00f3ticos"
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "917",
+        "statement": " La trisom\u00eda del 18 constituye los siguientes excepto: ",
+        "options": [
+            {
+                "id": "A",
+                "label": "Retraso mental"
+            },
+            {
+                "id": "B",
+                "label": "Dedos flexionados "
+            },
+            {
+                "id": "C",
+                "label": "Orejas de implantaci\u00f3n baja"
+            },
+            {
+                "id": "D",
+                "label": "Malformaciones genitales "
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "859",
+        "statement": "El s\u00edndrome de Kartagener se genera por la falta de una prote\u00edna importante en la composici\u00f3n de los cilios, esta prote\u00edna ausente corresponde a:",
+        "options": [
+            {
+                "id": "A",
+                "label": "Tubulina"
+            },
+            {
+                "id": "B",
+                "label": "Brazos de dine\u00edna"
+            },
+            {
+                "id": "C",
+                "label": "Profilina "
+            },
+            {
+                "id": "D",
+                "label": "Nexina"
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "869",
+        "statement": "\u00bfCu\u00e1l de estos factores hormonales no estimula la espermatogenia?\r\n",
+        "options": [
+            {
+                "id": "A",
+                "label": "Testosterona"
+            },
+            {
+                "id": "B",
+                "label": "LH"
+            },
+            {
+                "id": "C",
+                "label": "FSH"
+            },
+            {
+                "id": "D",
+                "label": "Progesterona"
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "902",
+        "statement": "Los endotelios corresponden a epitelio de clasificaci\u00f3n:",
+        "options": [
+            {
+                "id": "A",
+                "label": "Simple plano"
+            },
+            {
+                "id": "B",
+                "label": "Estratificado plano"
+            },
+            {
+                "id": "C",
+                "label": "Cil\u00edndrico bajo"
+            },
+            {
+                "id": "D",
+                "label": ""
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "543",
+        "statement": "Femenina de 72 a\u00f1os a quien de forma intraoperatoria encontraron ves\u00edcula con m\u00faltiples p\u00f3lipos, el m\u00e1s peque\u00f1o de 3 cm, por lo que enviaron a patolog\u00eda tejido extra\u00eddo y enviaron PET-CT, seg\u00fan lo anterior es correcto afirmar sobre la conducta:",
+        "options": [
+            {
+                "id": "A",
+                "label": "La conducta es adecuada, puesto que el PET-CT es el estudio adecuado de esta patolog\u00eda"
+            },
+            {
+                "id": "B",
+                "label": "La conducta es inadecuada"
+            },
+            {
+                "id": "C",
+                "label": "La conducta es adecuada aun que el PET-CT no es el estudio de elecci\u00f3n "
+            },
+            {
+                "id": "D",
+                "label": ""
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "1183",
+        "statement": "En pacientes con falla cardiaca congestiva, con respecto a su tratamiento diur\u00e9tico, es falso afirmar: ",
+        "options": [
+            {
+                "id": "A",
+                "label": "La dosis inicial administrada debe ser el equivalente a la misma dosis oral que reciben en casa en 24 horas"
+            },
+            {
+                "id": "B",
+                "label": "Debe ser administrada en bolo"
+            },
+            {
+                "id": "C",
+                "label": "La administraci\u00f3n en bolo es superior a la infusi\u00f3n continua "
+            },
+            {
+                "id": "D",
+                "label": ""
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "535",
+        "statement": "Femenina de 50 a\u00f1os con s\u00edntomas respiratorios cr\u00f3nicos como tos, disnea de grandes esfuerzos y en ocasiones hemoptisis, trae radiograf\u00eda de t\u00f3rax, donde se evidencia radioopacidad derecha, bien delimitada, redondeada de 4 cm aproximadamente que se acompa\u00f1a de atelectasia. Seg\u00fan lo anterior es correcto afirmar",
+        "options": [
+            {
+                "id": "A",
+                "label": "Se trata de un n\u00f3dulo pulmonar aislado"
+            },
+            {
+                "id": "B",
+                "label": "Se trata de un cuerpo extra\u00f1o"
+            },
+            {
+                "id": "C",
+                "label": "Se trata de una masa "
+            },
+            {
+                "id": "D",
+                "label": ""
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "509",
+        "statement": "Paciente de 45 a\u00f1os con colelitiasis y colecistitis aguda por ecograf\u00eda. Al examen f\u00edsico con dolor en hipocondrio derecho. \u00bfCu\u00e1l de las siguientes opciones no es un criterio diagn\u00f3stico para colecistitis aguda seg\u00fan las gu\u00edas Tokio 2018?",
+        "options": [
+            {
+                "id": "A",
+                "label": "Fiebre"
+            },
+            {
+                "id": "B",
+                "label": "Signo de Murphy positivo"
+            },
+            {
+                "id": "C",
+                "label": "Hallazgos ecogr\u00e1ficos"
+            },
+            {
+                "id": "D",
+                "label": "V\u00f3mito asociado a ingesta de alimento"
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "1030",
+        "statement": "Adulto con sospecha diagn\u00f3stica de artritis s\u00e9ptica en quien se realiza artrocentesis, \u00bfcu\u00e1l de los siguientes valores de leucocitos le confirmar\u00e1 el diagn\u00f3stico?\r\n",
+        "options": [
+            {
+                "id": "A",
+                "label": "> 20.000\r\n"
+            },
+            {
+                "id": "B",
+                "label": "> 100.000"
+            },
+            {
+                "id": "C",
+                "label": "> 50.000"
+            },
+            {
+                "id": "D",
+                "label": "> 75.000"
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "522",
+        "statement": "Masculino de 57 a\u00f1os con sospecha de enfermedad inflamatoria intestinal. Viene a consulta con informe de colonoscopia total que reporta p\u00e9rdida de la vascularidad de forma difusa por todo el trayecto del colon, lesiones eritematosas en parche en distintos segmentos, mucosa granular, presencia de un pseudop\u00f3lipo en colon derecho y peque\u00f1as \u00falceras en \u00edleon distal. Se tomaron biopsias de las lesiones. Respecto a los hallazgos imaginol\u00f3gicos e histol\u00f3gicos de la enfermedad, \u00bfCu\u00e1l de las siguientes opciones corresponde a enfermedad de Crohn? Seleccione la opci\u00f3n correcta:",
+        "options": [
+            {
+                "id": "A",
+                "label": "El  compromiso es ileocecal, es raro"
+            },
+            {
+                "id": "B",
+                "label": "Es una enfermedad transmural que puede afectar de la boca hasta el ano"
+            },
+            {
+                "id": "C",
+                "label": "El compromiso suele ser superficial, delimitado al \u00edleon y el recto"
+            },
+            {
+                "id": "D",
+                "label": "El granuloma caseificante descarta el diagn\u00f3stico"
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "227",
+        "statement": "Gestante de 30 semanas, hospitalizada hace 5 d\u00edas por cuadro de infecci\u00f3n urinaria no complicada, sin actividad uterina ni descargas vaginales, con respecto a la tromboprofilaxis posterior al alta, es correcto afirmar: \r\n",
+        "options": [
+            {
+                "id": "A",
+                "label": "Se extienden medidas antitromb\u00f3ticas no farmacol\u00f3gicas por 28 d\u00edas"
+            },
+            {
+                "id": "B",
+                "label": "Se debe continuar medidas farmacol\u00f3gicas por lo menos 1 mes posterior al alta"
+            },
+            {
+                "id": "C",
+                "label": "No se debe realizar ninguna medida farmacol\u00f3gica o no farmacol\u00f3gica, puesto que el riesgo ya ha sido superado"
+            },
+            {
+                "id": "D",
+                "label": "En la literatura no se especifica como debe realizarse la tromboprofilaxis "
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "685",
+        "statement": "Lo llaman a evaluar un paciente de 58 a\u00f1os, de sexo masculino, con diagn\u00f3stico de hematoma intracerebral gangliobasal derecho, ya evaluado por Neurocirug\u00eda, quienes consideran que no es de manejo quir\u00fargico. Refiere la enfermera que el paciente ha estado con cifras de presi\u00f3n arterial elevadas, usted revisa al paciente y no tiene deterioro neurol\u00f3gico ni signos de hipertensi\u00f3n intracraneana. Con respecto al manejo hemodin\u00e1mico en pacientes con ACV hemorr\u00e1gico es cierto:\n",
+        "options": [
+            {
+                "id": "A",
+                "label": "Se recomienda una meta de presi\u00f3n arterial menor a 220 mmHg para evitar complicaciones mayores secundarias a la emergencia hipertensiva."
+            },
+            {
+                "id": "B",
+                "label": "Los pacientes con diagn\u00f3stico de hematoma intracerebral deben recibir manejo agresivo de las cifras de presi\u00f3n arterial para evitar resangrados, la meta es mantener presi\u00f3n arterial sist\u00f3lica en 90-100 mmHg."
+            },
+            {
+                "id": "C",
+                "label": "En el contexto de ACV hemorr\u00e1gico se deben mantener cifras de presi\u00f3n arterial sist\u00f3lica entre 150-160 mmHg, ya que se debe garantizar adecuada presi\u00f3n de perfusi\u00f3n cerebral."
+            },
+            {
+                "id": "D",
+                "label": "La meta de presi\u00f3n arterial es llevar la presi\u00f3n arterial sist\u00f3lica inicialmente a menos de 140 mmHg (rango 130-150 mmHg), ya que cifras de presi\u00f3n arterial sist\u00f3lica mayores que 150 mmHg se asocian a complicaciones.\n"
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "11",
+        "statement": "Se realiza un estudio sobre pacientes fumadores de al menos un paquete diario durante 30 a\u00f1os. Se somete a pruebas de funci\u00f3n pulmonar a estos pacientes, y se encuentra que un subgrupo importante de ellos tiene una reducci\u00f3n de FEV 1, una CVF de normal a reducida y cocientes FEV 1 \/CVF inferiores al 70%. Se analizan los datos de autopsia del subgrupo de individuos del estudio con un cociente FEV 1 \/CVF bajo. \u00bfCu\u00e1l de las siguientes estructuras respiratorias pulmonares es m\u00e1s probable que resulte afectada por el proceso patol\u00f3gico de base?",
+        "options": [
+            {
+                "id": "A",
+                "label": "Conducto alveolar"
+            },
+            {
+                "id": "B",
+                "label": "Saco alveolar"
+            },
+            {
+                "id": "C",
+                "label": "Bronquios"
+            },
+            {
+                "id": "D",
+                "label": "Bronqu\u00edolo respiratorio"
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "554",
+        "statement": "Femenina de 45 a\u00f1os con diagn\u00f3stico de coledocolitiasis, con respecto a lo anterior, es correcto afirmar:",
+        "options": [
+            {
+                "id": "A",
+                "label": "La complicaci\u00f3n m\u00e1s com\u00fan es la colangitis"
+            },
+            {
+                "id": "B",
+                "label": "La complicaci\u00f3n m\u00e1s com\u00fan es la pancreatitis cronica"
+            },
+            {
+                "id": "C",
+                "label": "En episodios agudos es com\u00fan la cirrosis biliar secundaria e hipertensi\u00f3n portal"
+            },
+            {
+                "id": "D",
+                "label": ""
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "1105",
+        "statement": "Paciente que recibi\u00f3 trauma ocular, con linterna, se evidencia Hifema del 100%, visi\u00f3n a cuenta dedos y aumento del tono ocular \u00bfCu\u00e1l ser\u00eda la conducta m\u00e1s adecuada?",
+        "options": [
+            {
+                "id": "A",
+                "label": "Terapia t\u00f3pica"
+            },
+            {
+                "id": "B",
+                "label": "Remisi\u00f3n a oftalmolog\u00eda"
+            },
+            {
+                "id": "C",
+                "label": "Lavar con soluci\u00f3n salina\r\n"
+            },
+            {
+                "id": "D",
+                "label": ""
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
+    },
+    {
+        "id": "1032",
+        "statement": "Paciente de 6 a\u00f1os, con cuadro cl\u00ednico consistente en trauma en codo y antebrazo derecho, al examen f\u00edsico intenso dolor y limitaci\u00f3n para la pronaci\u00f3n con edema importante en tercio medio de antebrazo, estudios imagenol\u00f3gicos que muestran una fractura en tercio proximal de olecranon con subluxaci\u00f3n anterior de cabeza radial, no otras lesiones.\r\n\u00bfCu\u00e1l es el diagn\u00f3stico y la conducta m\u00e1s adecuada en este caso?\r\n",
+        "options": [
+            {
+                "id": "A",
+                "label": "Luxofractura de Galleazi, reducci\u00f3n cerrada e inmovilizaci\u00f3n con f\u00e9rula en posici\u00f3n neutra\r\n"
+            },
+            {
+                "id": "B",
+                "label": "Luxofractura de Monteggia, reducci\u00f3n cerrada e inmovilizaci\u00f3n con f\u00e9rula en posici\u00f3n neutra\r\n"
+            },
+            {
+                "id": "C",
+                "label": "Luxofractura de Galleazi, reducci\u00f3n abierta y fijaci\u00f3n interna"
+            },
+            {
+                "id": "D",
+                "label": "Luxofractura de Monteggia, reducci\u00f3n cerrada e inmovilizaci\u00f3n con f\u00e9rula en   supinaci\u00f3n"
+            },
+            {
+                "id": "E",
+                "label": ""
+            }
+        ]
     }
-  },
-  {
-    "statement": "question2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti nesciunt, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt! iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt!",
-    "statement_image": null,
-    "options": {
-      "A":"iusto libero quidem tenetur cum repellendus 1",
-      "B":"iusto libero quidem tenetur cum repellendus 1",
-      "C":"iusto libero quidem tenetur cum repellendus 1",
-      "D":"iusto libero quidem tenetur cum repellendus 1"
-    }
-  },
-  {
-    "statement": "question3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti nesciunt, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt! iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt!",
-    "statement_image": null,
-    "options": {
-      "A":"iusto libero quidem tenetur cum repellendus 1",
-      "B":"iusto libero quidem tenetur cum repellendus 1",
-      "C":"iusto libero quidem tenetur cum repellendus 1",
-      "D":"iusto libero quidem tenetur cum repellendus 1"
-    }
-  },
-  {
-    "statement": "question4 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti nesciunt, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt! iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt!",
-    "statement_image": null,
-    "options": {
-      "A":"iusto libero quidem tenetur cum repellendus 1",
-      "B":"iusto libero quidem tenetur cum repellendus 1",
-      "C":"iusto libero quidem tenetur cum repellendus 1",
-      "D":"iusto libero quidem tenetur cum repellendus 1"
-    }
-  },
-  {
-    "statement": "question5 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti nesciunt, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt! iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt!",
-    "statement_image": null,
-    "options": {
-      "A":"iusto libero quidem tenetur cum repellendus 1",
-      "B":"iusto libero quidem tenetur cum repellendus 1",
-      "C":"iusto libero quidem tenetur cum repellendus 1",
-      "D":"iusto libero quidem tenetur cum repellendus 1"
-    }
-  },
-  {
-    "statement": "question1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti nesciunt, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt! iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt!",
-    "statement_image": null,
-    "options": {
-      "A":"iusto libero quidem tenetur cum repellendus 1",
-      "B":"iusto libero quidem tenetur cum repellendus 1",
-      "C":"iusto libero quidem tenetur cum repellendus 1",
-      "D":"iusto libero quidem tenetur cum repellendus 1"
-    }
-  },
-  {
-    "statement": "question2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti nesciunt, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt! iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt!",
-    "statement_image": null,
-    "options": {
-      "A":"iusto libero quidem tenetur cum repellendus 1",
-      "B":"iusto libero quidem tenetur cum repellendus 1",
-      "C":"iusto libero quidem tenetur cum repellendus 1",
-      "D":"iusto libero quidem tenetur cum repellendus 1"
-    }
-  },
-  {
-    "statement": "question3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti nesciunt, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt! iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt!",
-    "options": {
-      "A":"iusto libero quidem tenetur cum repellendus 1",
-      "B":"iusto libero quidem tenetur cum repellendus 1",
-      "C":"iusto libero quidem tenetur cum repellendus 1",
-      "D":"iusto libero quidem tenetur cum repellendus 1"
-    }
-  },
-  {
-    "statement": "question4 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti nesciunt, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt! iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt!",
-    "options": {
-      "A":"iusto libero quidem tenetur cum repellendus 1",
-      "B":"iusto libero quidem tenetur cum repellendus 1",
-      "C":"iusto libero quidem tenetur cum repellendus 1",
-      "D":"iusto libero quidem tenetur cum repellendus 1"
-    }
-  },
-  {
-    "statement": "question5 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti nesciunt, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt! iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, iusto libero quidem tenetur cum repellendus praesentium necessitatibus eaque, totam et minus vitae soluta voluptatibus? Cumque soluta alias optio. Incidunt!",
-    "options": {
-      "A":"iusto libero quidem tenetur cum repellendus 1",
-      "B":"iusto libero quidem tenetur cum repellendus 1",
-      "C":"iusto libero quidem tenetur cum repellendus 1",
-      "D":"iusto libero quidem tenetur cum repellendus 1"
-    }
-  }
 ]

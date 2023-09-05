@@ -2,16 +2,24 @@ import { ChangeEvent, useState } from "react";
 import QuestionBank from "./components/QuestionBank";
 import Questions from "./components/Questions";
 import Simulations from "./components/Simulations";
-import Results from "./components/Results ";
-import { CurrentViewType, FormErrors, Question } from "../types";
+import ResultsScreen from "./components/Results ";
+import { Answer, CurrentViewType, FormErrors, Question, Results, SelectedSettings } from "../types";
 import { useSessionStorage, validateInput } from "../utils";
 
+const default_settings = {
+  number_of_questions: 20,
+  time_in_minutes: 40,
+  name: "Simulacro 1",
+  unlimited: false
+}
+
 const App = () => {
+  const [selectedSettings, setSelectedSettings] = useState<SelectedSettings>(default_settings);
   const [questions, setQuestions] = useSessionStorage<Array<Question>>(
     "questions",
     []
   );
-  const [userAnswers, setUserAnswers] = useSessionStorage<number[]>(
+  const [userAnswers, setUserAnswers] = useSessionStorage<Answer[]>(
     "userAnswers",
     []
   );
@@ -28,24 +36,14 @@ const App = () => {
   );
   const [formErrors, setFormErrors] = useState<FormErrors>({});
   const [isTimeUnlimited, setIsTimeUnlimited] = useSessionStorage("isTimeUnlimited", false);
+  const [loading, setLoading] = useState(false);
+  const [results, setResults] = useSessionStorage<Results|null>('results',null);
 
   const handleTimeQuestionsChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     setTimeQuestions(Number(value));
     const isValid = validateInput(Number(value), "number", { min: 40 });
     setFormErrors((prev) => ({ ...prev, timeQuestions: !isValid }));
-  };
-
-  const handleAnswer = (answer: number, index: number) => {
-    setUserAnswers([
-      ...userAnswers.slice(0, index),
-      answer,
-      ...userAnswers.slice(index + 1),
-    ]);
-  };
-
-  const handleFinish = () => {
-    setCurrentView("results");
   };
 
   const handleQuestionTimesChange = (newQuestionTimes: number[]) => {
@@ -74,7 +72,25 @@ const App = () => {
         setCurrentView("questions");
       });
   };
-
+  const getResults = () => {
+    setLoading(true);
+    fetch("./data/results.json", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify({
+        answers: userAnswers
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setResults(data);
+        setCurrentView("results");
+        setLoading(false);
+      });
+  }
   return (
     <>
       {currentView === "questionBank" && (
@@ -94,17 +110,14 @@ const App = () => {
           handleTimeUnlimitedChange={handleTimeUnlimitedChange}
         />
       )}
-      {currentView === "results" ? (
-        <Results
-          userAnswers={userAnswers}
-          questionList={questions}
-          questionTimes={questionTimes}
-          setSelectedSpecialties={setSelectedSpecialties}
-          setSelectedBasicArea={setSelectedBasicArea}
-          setTimeQuestions={setTimeQuestions}
-          setUserAnswers={setUserAnswers}
-          setIsTimeUnlimited={setIsTimeUnlimited}
-          onButtonClick={() => setCurrentView("questionBank")}
+      {currentView === "results" && results ? (
+        <ResultsScreen
+          results = {results}
+          onButtonClick={() => {
+            setUserAnswers([]);
+            setSelectedSettings(default_settings);
+            setCurrentView("questionBank");
+          }}
         />
       ) : (
         currentView === "questions" &&
@@ -123,13 +136,12 @@ const App = () => {
         ) : (
           <Questions
             userAnswers={userAnswers}
-            onAnswer={handleAnswer}
             setUserAnswers={setUserAnswers}
             questionList={questions}
-            onFinish={handleFinish}
-            isTimeUnlimited={isTimeUnlimited}
+            onFinish={getResults}
+            isTimeUnlimited={selectedSettings.unlimited}
             onQuestionTimesChange={handleQuestionTimesChange}
-            timeRemaining={timeQuestions * 60}
+            timeRemaining={selectedSettings.time_in_minutes * 60}
           />
         ))
       )}

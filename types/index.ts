@@ -8,13 +8,12 @@ import {
 import { VIEWTYPE } from "../constants/index";
 
 export interface Question {
+  id: number;
   statement: string;
   options: {
-    [key: string]: string
-  };
-  correct_answer: number;
-  specialties: string;
-  basic_areas: string;
+    id: string,
+    label: string
+  }[];  
 }
 export type ListQuestion = Question[];
 
@@ -28,9 +27,8 @@ export interface QuestionsProps {
   questionList: ListQuestion;
   onFinish: () => void;
   onQuestionTimesChange: (questionTimes: number[]) => void;
-  onAnswer: (answer: number, index: number) => void;
-  setUserAnswers: (value: number[]) => void
-  userAnswers: number[];
+  setUserAnswers: (value: Answer[]) => void
+  userAnswers: Answer[];
   timeRemaining: number;
   isTimeUnlimited: boolean
 }
@@ -136,4 +134,39 @@ export interface DataSettings {
   numQuestions: NumQuestions;
   timeMinutes: TimeMinutes;
   nameSimulation: NameSimulation;
+}
+
+export interface Results {
+  score: number
+  total: number
+  correct: number
+  questions: ResultsQuestion[]
+}
+
+export interface ResultsQuestion {
+  id: number
+  statement: string
+  specialty: string
+  type: string
+  justification: string
+  bibliography: string
+  is_correct: boolean
+}
+
+export interface SelectedSettings {
+  basic_areas?: number[];
+  specialties?: number[];
+  general_culture?: boolean;
+  number_of_questions: number;
+  name: string;
+  time_in_minutes: number;
+  unlimited: boolean;
+}
+
+export interface Answer {
+  index: number
+  questionId: number
+  answerId: string
+  timeToAnswerInSeconds?: string
+  report?: boolean
 }

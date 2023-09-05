@@ -4,9 +4,10 @@ import {
   handleFinish,
   handleNextQuestion,
   handlePreviousQuestion,
+  useSessionStorage,
 } from "../../utils";
 import Countdown from "./Countdown";
-import { QuestionsProps } from "../../types";
+import { Answer, QuestionsProps } from "../../types";
 import CustomButton from "./CustomButton";
 import { ArrowLeft } from "./icons/ArrowLeft";
 import { ArrowRight } from "./icons/ArrowRight";
@@ -18,13 +19,14 @@ const Questions = ({
   questionList,
   onFinish,
   onQuestionTimesChange,
-  onAnswer,
   userAnswers,
   setUserAnswers,
   isTimeUnlimited,
   timeRemaining: initialTimeRemaining,
 }: QuestionsProps) => {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [currentQuestionIndex, setCurrentQuestionIndex] =
+    useSessionStorage<number>("currentQuestionIndex", 0);
+
   const currentQuestion = questionList[currentQuestionIndex];
   const [timeRemaining, setTimeRemaining] = useState(() => {
     const storedTimeRemaining = sessionStorage.getItem("timeRemaining");
@@ -34,14 +36,20 @@ const Questions = ({
   });
   const [questionStartTime, setQuestionStartTime] = useState(Date.now());
   const [questionTimes, setQuestionTimes] = useState<number[]>([]);
-  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
-  const [markedQuestions, setMarkedQuestions] = useState<boolean[]>(
+  const [markedQuestions, setMarkedQuestions] = useSessionStorage<boolean[]>(
+    "markedQuestions",
     new Array(questionList.length).fill(false)
   );
   const [viewedQuestions, setViewedQuestions] = useState<boolean[]>(
     new Array(questionList.length).fill(false)
   );
 
+  const isQuestionAnswered = (questionIndex: number) => {
+    return (
+      userAnswers[questionIndex] !== undefined &&
+      userAnswers[questionIndex] !== null
+    );
+  };
   useEffect(() => {
     setViewedQuestions((prev) =>
       prev.map((viewed, index) =>
@@ -50,18 +58,25 @@ const Questions = ({
     );
   }, [currentQuestionIndex]);
 
-  useEffect(() => {
-    if (isQuestionAnswered(currentQuestionIndex)) {
-      setMarkedQuestions((prev) =>
-        prev.map((marked, index) =>
-          index === currentQuestionIndex ? false : marked
-        )
-      );
-    }
-  }, [currentQuestionIndex, userAnswers]);
+  const updateMarkedQuestions = (
+    currentQuestionIndex: number,
+    markedQuestions: boolean[]
+  ) => {
+    return markedQuestions.map((marked, index) =>
+      index === currentQuestionIndex
+        ? !isQuestionAnswered(currentQuestionIndex)
+        : marked
+    );
+  };
 
   useEffect(() => {
-    setSelectedAnswer(userAnswers[currentQuestionIndex]);
+    if (isQuestionAnswered(currentQuestionIndex)) {
+      const newMarkedQuestions = updateMarkedQuestions(
+        currentQuestionIndex,
+        markedQuestions
+      );
+      setMarkedQuestions(newMarkedQuestions);
+    }
   }, [currentQuestionIndex, userAnswers]);
 
   useEffect(() => {
@@ -105,17 +120,13 @@ const Questions = ({
     setQuestionStartTime(Date.now());
   }, [currentQuestionIndex]);
 
-  const isQuestionAnswered = (questionIndex: number) => {
-    return userAnswers[questionIndex] !== undefined;
-  };
-
   const handleNext = () => {
     if (!isQuestionAnswered(currentQuestionIndex)) {
-      setMarkedQuestions((prev) =>
-        prev.map((marked, index) =>
-          index === currentQuestionIndex ? true : marked
-        )
+      const newMarkedQuestions = updateMarkedQuestions(
+        currentQuestionIndex,
+        markedQuestions
       );
+      setMarkedQuestions(newMarkedQuestions);
     }
 
     if (currentQuestionIndex === questionList.length - 1) {
@@ -131,17 +142,12 @@ const Questions = ({
       }
     }
     handleNextQuestion(
-      selectedAnswer,
       currentQuestionIndex,
-      onAnswer,
       questionList.length,
       setCurrentQuestionIndex,
-      setSelectedAnswer,
       () => {
         handleFinish(
-          selectedAnswer,
           currentQuestionIndex,
-          onAnswer,
           questionStartTime,
           questionTimes,
           onQuestionTimesChange,
@@ -153,6 +159,14 @@ const Questions = ({
   };
 
   const handlePrevious = () => {
+    if (!isQuestionAnswered(currentQuestionIndex)) {
+      const newMarkedQuestions = updateMarkedQuestions(
+        currentQuestionIndex,
+        markedQuestions
+      );
+      setMarkedQuestions(newMarkedQuestions);
+    }
+
     handlePreviousQuestion(currentQuestionIndex, setCurrentQuestionIndex);
   };
 
@@ -164,14 +178,14 @@ const Questions = ({
     ]);
 
   const formattedTimeRemaining = formatTimeRemaining(timeRemaining);
-    
+
   return (
     <>
       <div className="p-10 bg-bg-primary min-h-screen flex items-center justify-center">
         <div className="px-8 pt-5 relative bg-white rounded-lg shadow-md">
           <Toaster richColors position="top-center" />
           <div className="flex justify-between items-center mb-4">
-          <LogoFR />
+            <LogoFR />
             <Countdown
               timeRemaining={timeRemaining}
               formattedTimeRemaining={formattedTimeRemaining}
@@ -192,7 +206,9 @@ const Questions = ({
                     }
                   >
                     <div className="flex items-center text-typogra font-bold ml-6">
-                      {!viewedQuestions[index] && <p className="bg-point-color h-2 w-2 rounded-full"></p>}
+                      {!viewedQuestions[index] && (
+                        <p className="bg-point-color h-2 w-2 rounded-full"></p>
+                      )}
                       <span className="ml-2">{index + 1}</span>
                       {markedQuestions[index] && <span>🚩</span>}
                     </div>
@@ -204,63 +220,86 @@ const Questions = ({
             <div className="w-3/4 ml-10 mb-10">
               <div className="flex justify-between gap-x-4 mb-10">
                 <div className="text-lg font-bold text-typogra">
-                Pregunta {currentQuestionIndex + 1} de {questionList.length}
+                  Pregunta {currentQuestionIndex + 1} de {questionList.length}
                 </div>
-              <CustomInput
-                inputType="checkbox"
-                titleLabel="Marcar pregunta"
-                styleLabel="flex items-center mr-2"
-                inputStyle="mr-2 h-5 w-5 cursor-pointer form-checkbox bg-white rounded-full border border-gray-300 appearance-none outline-none checked:bg-check-color"
-                labelPosition="after"
-                isChecked={markedQuestions[currentQuestionIndex]}
-                handleChange={markQuestion}
-              />
-              <CustomInput
-                inputType="checkbox"
-                titleLabel="Reportar pregunta"
-                styleLabel="flex items-center"
-                inputStyle="mr-2 h-5 w-5 cursor-pointer form-checkbox bg-white rounded-full border border-gray-300 appearance-none outline-none checked:bg-check-color"
-                labelPosition="after"
-              />
-            </div>
+                <CustomInput
+                  inputType="checkbox"
+                  titleLabel="Marcar pregunta"
+                  styleLabel="flex items-center mr-2"
+                  inputStyle="mr-2 h-5 w-5 cursor-pointer form-checkbox bg-white rounded-full border border-gray-300 appearance-none outline-none checked:bg-check-color"
+                  labelPosition="after"
+                  isChecked={markedQuestions[currentQuestionIndex]}
+                  handleChange={markQuestion}
+                />
+                <CustomInput
+                  inputType="checkbox"
+                  titleLabel="Reportar pregunta"
+                  styleLabel="flex items-center"
+                  inputStyle="mr-2 h-5 w-5 cursor-pointer form-checkbox bg-white rounded-full border border-gray-300 appearance-none outline-none checked:bg-check-color"
+                  labelPosition="after"
+                />
+              </div>
               <p className="mb-4 text-gray-600">{currentQuestion.statement}</p>
               <div className="mb-4">
-                {Object.values(currentQuestion.options).map((option, index) => (
-                  <label
-                    key={index}
-                    className="flex items-center w-full mb-2 bg-slate-50 border border-solid p-1 rounded-md pl-3"
-                  >
-                    <input
-                      value={index}
-                      checked={selectedAnswer === index}
-                      onChange={(e) => {
-                        setSelectedAnswer(Number(e.target.value));
-                        const newAnswers = [...userAnswers];
-                        newAnswers[currentQuestionIndex] = Number(
-                          e.target.value
-                        );
-                        setUserAnswers(newAnswers);
-                      }}
-                      type="radio"
-                      name="respuesta"
-                      className="mr-2 accent-blue-700 h-4 w-4 cursor-pointer"
-                    />
-                    <span className="text-gray-700">{option}</span>
-                  </label>
-                ))}
+                {Object.values(currentQuestion.options).map((option, index) => {
+                  if (option.label == "") {
+                    return null;
+                  }
+                  return (
+                    <label
+                      key={index}
+                      className="flex items-center w-full mb-2 bg-slate-50 border border-solid p-1 rounded-md pl-3"
+                    >
+                      <input
+                        value={option.id}
+                        checked={
+                          userAnswers.find(
+                            (userAnswer) =>
+                              userAnswer.questionId === currentQuestion.id
+                          )?.answerId === option.id
+                        }
+                        onChange={(e) => {
+                          let newAnswers: Answer[] = [...userAnswers];
+                          if (
+                            userAnswers.find(
+                              (selected) =>
+                                selected.questionId === currentQuestion.id
+                            )
+                          ) {
+                            newAnswers = userAnswers.filter(
+                              (selected) =>
+                                selected.questionId !== currentQuestion.id
+                            );
+                          }
+                          newAnswers = [
+                            ...newAnswers,
+                            {
+                              questionId: currentQuestion.id,
+                              answerId: option.id,
+                              index: currentQuestionIndex,
+                            },
+                          ];
+                          setUserAnswers(newAnswers);
+                        }}
+                        type="radio"
+                        name="respuesta"
+                        className="mr-2 accent-blue-700 h-4 w-4 cursor-pointer"
+                      />
+                      <span className="text-gray-700">{option.label}</span>
+                    </label>
+                  );
+                })}
               </div>
               <div className="flex justify-end gap-x-4">
-                {
-                  currentQuestionIndex > 0 && (
-                    <CustomButton
-                  title="Anterior"
-                  btnType="button"
-                  containerStyles="flex items-center px-5 py-2 text-sm text-gray-700 bg-btn-primary hover:bg-btn-primary-hover text-white font-bold mb-6 py-2 px-4 rounded mt-4"
-                  handleClick={handlePrevious}
-                  icon={<ArrowLeft />}
-                />
-                  )
-                }
+                {currentQuestionIndex > 0 && (
+                  <CustomButton
+                    title="Anterior"
+                    btnType="button"
+                    containerStyles="flex items-center px-5 py-2 text-sm text-gray-700 bg-btn-primary hover:bg-btn-primary-hover text-white font-bold mb-6 py-2 px-4 rounded mt-4"
+                    handleClick={handlePrevious}
+                    icon={<ArrowLeft />}
+                  />
+                )}
                 <CustomButton
                   title={
                     currentQuestionIndex === questionList.length - 1
