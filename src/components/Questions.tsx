@@ -35,7 +35,10 @@ const Questions = ({
       : initialTimeRemaining;
   });
   const [questionStartTime, setQuestionStartTime] = useState(Date.now());
-  const [questionTimes, setQuestionTimes] = useState<number[]>([]);
+  const [questionTimes, setQuestionTimes] = useState<number[]>(
+    new Array(questionList.length).fill(0)
+  );
+
   const [markedQuestions, setMarkedQuestions] = useSessionStorage<boolean[]>(
     "markedQuestions",
     new Array(questionList.length).fill(false)
@@ -43,6 +46,37 @@ const Questions = ({
   const [viewedQuestions, setViewedQuestions] = useState<boolean[]>(
     new Array(questionList.length).fill(false)
   );
+  const [timeElapsed, setTimeElapsed] = useState(0);
+  const [reporting, setReporting] = useState<{ [key: number]: boolean }>({});
+
+  useEffect(() => {
+    const initialReporting: { [key: number]: boolean } = {};
+    questionList.forEach((_, index) => {
+      if (markedQuestions[index]) {
+        initialReporting[index] = true;
+      }
+    });
+    setReporting(initialReporting);
+  }, []);
+
+  useEffect(() => {
+    let timerId: number | undefined;
+
+    if (currentQuestionIndex === questionList.length - 1) {
+      clearInterval(timerId);
+    } else {
+      timerId = setInterval(() => {
+        setQuestionTimes((prevTimes) => {
+          const updatedTimes = [...prevTimes];
+          updatedTimes[currentQuestionIndex] =
+            prevTimes[currentQuestionIndex] + 1;
+          return updatedTimes;
+        });
+      }, 1000);
+    }
+
+    return () => clearInterval(timerId);
+  }, [currentQuestionIndex, questionList]);
 
   const isQuestionAnswered = (questionIndex: number) => {
     return (
@@ -218,7 +252,7 @@ const Questions = ({
             </div>
 
             <div className="w-3/4 ml-10 mb-10">
-            <div className="flex justify-end gap-x-4 absolute left-0 pb-0 top-40 right-0 pr-24">
+              <div className="flex justify-end gap-x-4 absolute left-0 pb-0 top-40 right-0 pr-24">
                 {currentQuestionIndex > 0 && (
                   <CustomButton
                     title="Anterior"
@@ -260,6 +294,13 @@ const Questions = ({
                   styleLabel="flex items-center"
                   inputStyle="mr-2 h-5 w-5 cursor-pointer form-checkbox bg-white rounded-full border border-gray-300 appearance-none outline-none checked:bg-check-color"
                   labelPosition="after"
+                  isChecked={reporting[currentQuestionIndex] || false}
+                  handleChange={(e) => {
+                    setReporting((prev) => ({
+                      ...prev,
+                      [currentQuestionIndex]: e.target.checked,
+                    }));
+                  }}
                 />
               </div>
               <p className="mb-4 text-gray-600">{currentQuestion.statement}</p>
@@ -294,12 +335,17 @@ const Questions = ({
                                 selected.questionId !== currentQuestion.id
                             );
                           }
+                          const timeToAnswerInSeconds =
+                            timeElapsed + questionTimes[currentQuestionIndex];
                           newAnswers = [
                             ...newAnswers,
                             {
                               questionId: currentQuestion.id,
                               answerId: option.id,
                               index: currentQuestionIndex,
+                              report: reporting,
+                              timeToAnswerInSeconds:
+                              timeToAnswerInSeconds.toString(),
                             },
                           ];
                           setUserAnswers(newAnswers);
@@ -315,7 +361,6 @@ const Questions = ({
               </div>
             </div>
           </div>
-              
         </div>
       </div>
     </>

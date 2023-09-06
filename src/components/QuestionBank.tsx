@@ -3,7 +3,7 @@ import LogoFR from "./icons/LogoFR";
 
 interface QuestionBankProps {
   onButtonClick: () => void;
-  isDisable: false
+  isDisable?: boolean
 }
 
 export default function QuestionBank({ onButtonClick, isDisable }: QuestionBankProps) {
@@ -32,8 +32,13 @@ export default function QuestionBank({ onButtonClick, isDisable }: QuestionBankP
                   containerStyles="transition-colors duration-200 border ml-20 rounded-md gap-x-2 hover:bg-btn-primary-hover bg-btn-primary text-white font-bold"
                   btnType="button"
                 />
-              )
-            }
+                )
+              }
+              <CustomButton
+                title="Ver resultados simulacros anteriores"
+                containerStyles="transition-colors duration-200 border ml-20 rounded-md gap-x-2 hover:bg-typogra-hover bg-typogra text-white font-bold"
+                btnType="button"
+              />
           </div>
         </div>
       </div>

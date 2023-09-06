@@ -168,5 +168,5 @@ export interface Answer {
   questionId: number
   answerId: string
   timeToAnswerInSeconds?: string
-  report?: boolean
+  report?: { [key: number]: boolean | undefined };
 }
