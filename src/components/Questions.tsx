@@ -181,8 +181,8 @@ const Questions = ({
 
   return (
     <>
-      <div className="p-10 bg-bg-primary min-h-screen flex items-center justify-center">
-        <div className="px-8 pt-5 relative bg-white rounded-lg shadow-md">
+      <div className="p-10 bg-bg-primary min-h-screen w-full flex items-center justify-center">
+        <div className="px-8 pt-5 pb-20 relative max-h-[calc(100vh - 40px)] bg-white w-full rounded-lg shadow-md">
           <Toaster richColors position="top-center" />
           <div className="flex justify-between items-center mb-4">
             <LogoFR />
@@ -218,7 +218,30 @@ const Questions = ({
             </div>
 
             <div className="w-3/4 ml-10 mb-10">
-              <div className="flex justify-between gap-x-4 mb-10">
+            <div className="flex justify-end gap-x-4 absolute left-0 pb-0 top-40 right-0 pr-24">
+                {currentQuestionIndex > 0 && (
+                  <CustomButton
+                    title="Anterior"
+                    btnType="button"
+                    containerStyles="flex items-center px-5 py-2 text-sm text-gray-700 bg-btn-primary hover:bg-btn-primary-hover text-white font-bold mb-6 py-2 px-4 rounded mt-4"
+                    handleClick={handlePrevious}
+                    icon={<ArrowLeft />}
+                  />
+                )}
+                <CustomButton
+                  title={
+                    currentQuestionIndex === questionList.length - 1
+                      ? "Terminar"
+                      : "Siguiente"
+                  }
+                  btnType="button"
+                  containerStyles="flex items-center px-5 py-2 text-sm text-gray-700 bg-btn-primary hover:bg-btn-primary-hover text-white font-bold mb-6 py-2 px-4 rounded mt-4"
+                  handleClick={handleNext}
+                  iconPosition="after"
+                  icon={<ArrowRight />}
+                />
+              </div>
+              <div className="flex justify-between gap-x-4 mb-24">
                 <div className="text-lg font-bold text-typogra">
                   Pregunta {currentQuestionIndex + 1} de {questionList.length}
                 </div>
@@ -290,31 +313,9 @@ const Questions = ({
                   );
                 })}
               </div>
-              <div className="flex justify-end gap-x-4">
-                {currentQuestionIndex > 0 && (
-                  <CustomButton
-                    title="Anterior"
-                    btnType="button"
-                    containerStyles="flex items-center px-5 py-2 text-sm text-gray-700 bg-btn-primary hover:bg-btn-primary-hover text-white font-bold mb-6 py-2 px-4 rounded mt-4"
-                    handleClick={handlePrevious}
-                    icon={<ArrowLeft />}
-                  />
-                )}
-                <CustomButton
-                  title={
-                    currentQuestionIndex === questionList.length - 1
-                      ? "Terminar"
-                      : "Siguiente"
-                  }
-                  btnType="button"
-                  containerStyles="flex items-center px-5 py-2 text-sm text-gray-700 bg-btn-primary hover:bg-btn-primary-hover text-white font-bold mb-6 py-2 px-4 rounded mt-4"
-                  handleClick={handleNext}
-                  iconPosition="after"
-                  icon={<ArrowRight />}
-                />
-              </div>
             </div>
           </div>
+              
         </div>
       </div>
     </>

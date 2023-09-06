@@ -3,9 +3,10 @@ import LogoFR from "./icons/LogoFR";
 
 interface QuestionBankProps {
   onButtonClick: () => void;
+  isDisable: false
 }
 
-export default function QuestionBank({ onButtonClick }: QuestionBankProps) {
+export default function QuestionBank({ onButtonClick, isDisable }: QuestionBankProps) {
   return (
     <div className="flex justify-center items-center p-24 bg-bg-primary h-screen w-screen">
       <div className="p-4 bg-white rounded-lg h-full w-full">
@@ -24,11 +25,15 @@ export default function QuestionBank({ onButtonClick }: QuestionBankProps) {
               btnType="button"
               handleClick={onButtonClick}
             />
-            <CustomButton
-              title="Simulación universidad"
-              containerStyles="transition-colors duration-200 border ml-20 rounded-md gap-x-2 hover:bg-btn-primary-hover bg-btn-primary text-white font-bold"
-              btnType="button"
-            />
+            {
+              isDisable && (
+                <CustomButton
+                  title="Simulación universidad"
+                  containerStyles="transition-colors duration-200 border ml-20 rounded-md gap-x-2 hover:bg-btn-primary-hover bg-btn-primary text-white font-bold"
+                  btnType="button"
+                />
+              )
+            }
           </div>
         </div>
       </div>

@@ -9,7 +9,8 @@ module.exports = {
         'typogra': '#0B2A4A',
         'bg-primary': '#D9D9D9',
         'check-color': '#0B2A4A',
-        'point-color': '#00AEA9'
+        'point-color': '#00AEA9',
+        'body-table' : '#0B2A4A'
       }
     },
   },

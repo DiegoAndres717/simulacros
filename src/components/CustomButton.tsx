@@ -9,7 +9,7 @@ export default function CustomButton({
   btnType,
   icon,
   iconPosition = "before",
-  textStyles
+  textStyles,
 }: CustomButtonProps) {
   return (
     <button
